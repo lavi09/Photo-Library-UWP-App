@@ -1,0 +1,104 @@
+﻿<Page
+    x:Class="PhotoLib.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:PhotoLib"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Page.Resources>
+    <Style x:Key="AlbumGroupHeaderContainerStyle" TargetType="ListViewHeaderItem">
+        <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
+    </Style>
+    <DataTemplate x:Key="SongTemplate">
+        <Grid Name ="GridSongTemplate "  >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="10*" />
+                <ColumnDefinition Width="*" />
+
+            </Grid.ColumnDefinitions>
+                <StackPanel Grid.Column="2" Orientation="Horizontal" HorizontalAlignment="Right">
+               
+                </StackPanel>
+            </Grid>
+        </DataTemplate>
+        <SolidColorBrush x:Key="MyTransparentBackgroundLightGray" Color="Pink" Opacity="0.3" />
+        <SolidColorBrush x:Key="MyTransparentBackgroundWhite" Color="BLUE" Opacity="0.0" />
+    </Page.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" ></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="100"></RowDefinition>
+        </Grid.RowDefinitions>
+        <SplitView Grid.Row="0" Grid.RowSpan="2" x:Name="MySplitView" DisplayMode="CompactOverlay"  IsPaneOpen="False" 
+               CompactPaneLength="50" OpenPaneLength="220" PaneClosing="MySplitView_PaneClosing" Background="{StaticResource MyTransparentBackgroundWhite}">
+            <SplitView.Pane >
+            <StackPanel Background="Transparent">
+                <Button x:Name="HamburgerButton" FontFamily="Segoe MDL2 Assets" Content="&#xE700;"
+                    Width="50" Height="50"  BorderThickness="0" Background="Transparent" Click="HamburgerButton_Click"/>
+
+                <StackPanel Orientation="Horizontal">
+                        <Button x:Name="Search" FontFamily="Segoe MDL2 Assets" Content="&#59166;"
+                        Width="50" Height="50" Background="Transparent" Click="SearchSongButton_Click"/>
+
+                        <AutoSuggestBox Name="SearchAutoSuggestBox"
+                            PlaceholderText="Search for pics"  FontSize="11" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="10,0,10,10"
+                            Width="200" Height="30"
+                            QueryIcon="Find"
+                           
+                            QuerySubmitted="SearchAutoSuggestBox_QuerySubmitted"  Background="White" />
+                    </StackPanel>
+                    <Button x:Name="DisplayPicsList"
+                    Width="220" Height="50"  BorderThickness="0" Background="Transparent" Click="DisplayPIcsList_Click">
+                        <StackPanel Orientation="Horizontal">
+                            <FontIcon   Margin="5,0,0,0" FontFamily="Segoe MDL2 Assets" FontSize="16"  Glyph="&#59606;"/>
+                            <TextBlock Text="Collections"  Margin="25,0,0,0" FontSize="14" Width="200" VerticalAlignment="Center" />
+                        </StackPanel>
+                    </Button>
+                    <Button x:Name="AddPicButton"
+                        Width="220" 
+                        Height="50" 
+                        BorderThickness="0" 
+                        Background="Transparent" 
+                        Click="AddPicButton_Click">
+                        <StackPanel Orientation="Horizontal">
+                            <FontIcon Margin="5,0,0,0" FontFamily="Segoe MDL2 Assets" FontSize="16"  Glyph="&#59152;"/>
+                            <TextBlock Text="Upload"  Margin="25,0,0,0"  Width="200" FontSize="14" VerticalAlignment="Center" />
+                        </StackPanel>
+                    </Button>
+                    <Button x:Name="FoldersButton"
+                        Width="220" 
+                        Height="50" 
+                        BorderThickness="0" 
+                        Background="Transparent" 
+                        Click="FoldersButton_Click">
+                        <StackPanel Orientation="Horizontal">
+                            <FontIcon Margin="5,0,0,0" FontFamily="Segoe MDL2 Assets" FontSize="16"  Glyph="&#59959;"/>
+                            <TextBlock Text="Folders"  Margin="25,0,0,0"  Width="100" FontSize="14" VerticalAlignment="Center" />
+                            <Button x:Name="AddFoldersButton" Background="Transparent" BorderThickness="0"  Margin="5,0,0,0" Width="50" FontFamily="Segoe MDL2 Assets" FontSize="16"  Content="&#59152;" Click="AddFoldersButton_Click"/>
+                        </StackPanel>
+                    </Button>
+                    
+                </StackPanel>
+            </SplitView.Pane>
+            <StackPanel>
+                <TextBlock Text=" My Photos" Style="{StaticResource SubheaderTextBlockStyle}"/>
+                <Pivot RequestedTheme="Light" x:Name="rootPivot"  PivotItemLoading="rootPivot_PivotItemLoading" SelectionChanged="rootPivot_SelectionChanged" >
+                    <PivotItem Header="Collections"></PivotItem>
+                    <PivotItem Header="Albums"></PivotItem>
+                    <PivotItem Header="Camera"></PivotItem>
+
+
+
+                </Pivot>
+                </StackPanel>
+            </SplitView>
+                    
+        
+    </Grid>
+
+</Page>
+    

@@ -1,0 +1,1 @@
+C:\Users\Administrator\source\repos\PhotoLib\PhotoLib\PhotoLib.csproj;x86
