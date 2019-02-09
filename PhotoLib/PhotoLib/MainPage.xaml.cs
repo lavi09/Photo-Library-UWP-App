@@ -90,5 +90,55 @@ namespace PhotoLib
         {
 
         }
+
+        private void MySplitView_PaneClosing(SplitView sender, SplitViewPaneClosingEventArgs args)
+        {
+
+        }
+
+        private void HamburgerButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Search_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void DisplayPicsList_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void AddPicButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void FoldersButton_Click_1(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void AddFoldersButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void SearchAutoSuggestBox_QuerySubmitted(AutoSuggestBox sender, AutoSuggestBoxQuerySubmittedEventArgs args)
+        {
+
+        }
+
+        private void RootPivot_PivotItemLoading(Pivot sender, PivotItemEventArgs args)
+        {
+
+        }
+
+        private void RootPivot_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
     }
 }

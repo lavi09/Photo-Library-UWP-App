@@ -11,21 +11,19 @@
     <Style x:Key="AlbumGroupHeaderContainerStyle" TargetType="ListViewHeaderItem">
         <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
     </Style>
-    <DataTemplate x:Key="SongTemplate">
-        <Grid Name ="GridSongTemplate "  >
+    <DataTemplate x:Key="PicTemplate">
+        <Grid Name ="GridPicTemplate "  >
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*" />
                 <ColumnDefinition Width="10*" />
                 <ColumnDefinition Width="*" />
 
             </Grid.ColumnDefinitions>
-                <StackPanel Grid.Column="2" Orientation="Horizontal" HorizontalAlignment="Right">
-               
-                </StackPanel>
+                
             </Grid>
         </DataTemplate>
-        <SolidColorBrush x:Key="MyTransparentBackgroundLightGray" Color="Pink" Opacity="0.3" />
-        <SolidColorBrush x:Key="MyTransparentBackgroundWhite" Color="BLUE" Opacity="0.0" />
+        <SolidColorBrush x:Key="MyTransparentBackgroundLightGray" Color="Gray" Opacity="0.3" />
+        <SolidColorBrush x:Key="MyTransparentBackgroundWhite" Color="white" Opacity="0.0" />
     </Page.Resources>
     <Grid>
         <Grid.RowDefinitions>
@@ -42,7 +40,7 @@
 
                 <StackPanel Orientation="Horizontal">
                         <Button x:ConnectionId='9' x:Name="Search" FontFamily="Segoe MDL2 Assets" Content="&#59166;"
-                        Width="50" Height="50" Background="Transparent"                               />
+                        Width="50" Height="50" Background="Transparent"                     />
 
                         <AutoSuggestBox x:ConnectionId='10' Name="SearchAutoSuggestBox"
                             PlaceholderText="Search for pics"  FontSize="11" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="10,0,10,10"
@@ -54,7 +52,7 @@
                     <Button x:ConnectionId='5' x:Name="DisplayPicsList"
                     Width="220" Height="50"  BorderThickness="0" Background="Transparent"                              >
                         <StackPanel Orientation="Horizontal">
-                            <FontIcon   Margin="5,0,0,0" FontFamily="Segoe MDL2 Assets" FontSize="16"  Glyph="&#59606;"/>
+                            <FontIcon   Margin="5,0,0,0" FontFamily="Segoe MDL2 Assets" FontSize="16"  Glyph="&#xE8B9;"/>
                             <TextBlock Text="Collections"  Margin="25,0,0,0" FontSize="14" Width="200" VerticalAlignment="Center" />
                         </StackPanel>
                     </Button>
@@ -65,7 +63,7 @@
                         Background="Transparent" 
                                                   >
                         <StackPanel Orientation="Horizontal">
-                            <FontIcon Margin="5,0,0,0" FontFamily="Segoe MDL2 Assets" FontSize="16"  Glyph="&#59152;"/>
+                            <FontIcon Margin="5,0,0,0" FontFamily="Segoe MDL2 Assets" FontSize="16"  Glyph="&#xE898;"/>
                             <TextBlock Text="Upload"  Margin="25,0,0,0"  Width="200" FontSize="14" VerticalAlignment="Center" />
                         </StackPanel>
                     </Button>
@@ -74,9 +72,9 @@
                         Height="50" 
                         BorderThickness="0" 
                         Background="Transparent" 
-                                                   >
+                                                     >
                         <StackPanel Orientation="Horizontal">
-                            <FontIcon Margin="5,0,0,0" FontFamily="Segoe MDL2 Assets" FontSize="16"  Glyph="&#59959;"/>
+                            <FontIcon Margin="5,0,0,0" FontFamily="Segoe MDL2 Assets" FontSize="16"  Glyph="&#xE8B7;"/>
                             <TextBlock Text="Folders"  Margin="25,0,0,0"  Width="100" FontSize="14" VerticalAlignment="Center" />
                             <Button x:ConnectionId='8' x:Name="AddFoldersButton" Background="Transparent" BorderThickness="0"  Margin="5,0,0,0" Width="50" FontFamily="Segoe MDL2 Assets" FontSize="16"  Content="&#59152;"                               />
                         </StackPanel>
@@ -86,7 +84,7 @@
             </SplitView.Pane>
             <StackPanel>
                 <TextBlock Text=" My Photos" Style="{StaticResource SubheaderTextBlockStyle}"/>
-                <Pivot x:ConnectionId='11' RequestedTheme="Light" x:Name="rootPivot"                                                                                              >
+                <Pivot x:ConnectionId='11' RequestedTheme="Light" x:Name="rootPivot"                                                                                               >
                     <PivotItem Header="Collections"></PivotItem>
                     <PivotItem Header="Albums"></PivotItem>
                     <PivotItem Header="Camera"></PivotItem>
