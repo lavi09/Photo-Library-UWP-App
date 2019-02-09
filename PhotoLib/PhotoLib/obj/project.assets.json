@@ -27915,11 +27915,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Administrator\\source\\repos\\PhotoLib\\PhotoLib\\PhotoLib.csproj",
+      "projectUniqueName": "C:\\Users\\Administrator\\Source\\Repos\\Assignment-1\\PhotoLib\\PhotoLib\\PhotoLib.csproj",
       "projectName": "PhotoLib",
-      "projectPath": "C:\\Users\\Administrator\\source\\repos\\PhotoLib\\PhotoLib\\PhotoLib.csproj",
+      "projectPath": "C:\\Users\\Administrator\\Source\\Repos\\Assignment-1\\PhotoLib\\PhotoLib\\PhotoLib.csproj",
       "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Administrator\\source\\repos\\PhotoLib\\PhotoLib\\obj\\",
+      "outputPath": "C:\\Users\\Administrator\\Source\\Repos\\Assignment-1\\PhotoLib\\PhotoLib\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
