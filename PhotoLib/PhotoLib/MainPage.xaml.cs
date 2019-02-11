@@ -14,6 +14,9 @@ using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 using Windows.Storage;
 using Windows.Storage.Pickers;
+using PhotoLib.views;
+
+
 
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
@@ -29,116 +32,57 @@ namespace PhotoLib
         {
             this.InitializeComponent();
         }
-        //private void AutoSuggestBox_TextChanged(AutoSuggestBox sender, AutoSuggestBoxTextChangedEventArgs args)
-        //{
-        //    // Only get results when it was a user typing, 
-        //    // otherwise assume the value got filled in by TextMemberPath 
-        //    // or the handler for SuggestionChosen.
-        //    if (args.Reason == AutoSuggestionBoxTextChangeReason.UserInput)
-        //    {
-        //        //Set the ItemsSource to be your filtered dataset
-        //        //sender.ItemsSource = dataset;
-        //    }
-        //}
-        //private void AutoSuggestBox_SuggestionChosen(AutoSuggestBox sender, AutoSuggestBoxSuggestionChosenEventArgs args)
-        //{
-        //    // Set sender.Text. You can use args.SelectedItem to build your text string.
-        //}
+        private void NvTopLevelNav_Loaded(object sender, RoutedEventArgs e)
+        {
+            // set the initial SelectedItem
+            foreach (NavigationViewItemBase item in nvTopLevelNav.MenuItems)
+            {
+                if (item is NavigationViewItem && item.Tag.ToString() == "Home_Page")
+                {
+                    nvTopLevelNav.SelectedItem = item;
+                    break;
+                }
+            }
+            contentFrame.Navigate(typeof(Home));
+
+        }
+        private void NvTopLevelNav_ItemInvoked(NavigationView sender, NavigationViewItemInvokedEventArgs args)
+        {
+            TextBlock ItemContent = args.InvokedItem as TextBlock;
+            if (ItemContent != null)
+            {
+                switch (ItemContent.Tag)
+                {
+                    case "Nav_Home":
+                        contentFrame.Navigate(typeof(Home));
+                        break;
+
+                    case "Nav_Upload":
+                        contentFrame.Navigate(typeof(Upload));
+                        break;
+
+                    case "Nav_Albums":
+                        contentFrame.Navigate(typeof(albums));
+                        break;
+
+                    case "Nav_Folder":
+                        contentFrame.Navigate(typeof(folders));
+                        break;
+
+          
+                }
+            }
+
+        }
 
 
-        //private void AutoSuggestBox_QuerySubmitted(AutoSuggestBox sender, AutoSuggestBoxQuerySubmittedEventArgs args)
-        //{
-        //    if (args.ChosenSuggestion != null)
-        //    {
-        //        // User selected an item from the suggestion list, take an action on it here.
-        //    }
-        //    else
-        //    {
-        //        // Use args.QueryText to determine what to do.
-        //    }
-        //}
-
-        //private async void PickAFileButton_Click(object sender, RoutedEventArgs e)
-        //{
-        //    // Clear previous returned file name, if it exists, between iterations of this scenario
-        //    OutputTextBlock.Text = "";
-
-        //    FileOpenPicker openPicker = new FileOpenPicker();
-        //    openPicker.ViewMode = PickerViewMode.Thumbnail;
-        //    openPicker.SuggestedStartLocation = PickerLocationId.PicturesLibrary;
-        //    openPicker.FileTypeFilter.Add(".jpg");
-        //    openPicker.FileTypeFilter.Add(".jpeg");
-        //    openPicker.FileTypeFilter.Add(".png");
-        //    StorageFile file = await openPicker.PickSingleFileAsync();
-        //    if (file != null)
-        //    {
-        //        // Application now has read/write access to the picked file
-        //        OutputTextBlock.Text = "Picked photo: " + file.Name;
-        //    }
-        //    else
-        //    {
-        //        OutputTextBlock.Text = "Operation cancelled.";
-        //    }
-        //}
-
-        private void TextBlock_SelectionChanged(object sender, RoutedEventArgs e)
+        private void NvTopLevelNav_SelectionChanged(NavigationView sender, NavigationViewSelectionChangedEventArgs args)
         {
 
         }
 
-        private void FoldersButton_Click(object sender, RoutedEventArgs e)
-        {
+       
 
-        }
-
-        private void MySplitView_PaneClosing(SplitView sender, SplitViewPaneClosingEventArgs args)
-        {
-
-        }
-
-        private void HamburgerButton_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void Search_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void DisplayPicsList_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void AddPicButton_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void FoldersButton_Click_1(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void AddFoldersButton_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void SearchAutoSuggestBox_QuerySubmitted(AutoSuggestBox sender, AutoSuggestBoxQuerySubmittedEventArgs args)
-        {
-
-        }
-
-        private void RootPivot_PivotItemLoading(Pivot sender, PivotItemEventArgs args)
-        {
-
-        }
-
-        private void RootPivot_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-
-        }
+       
     }
 }

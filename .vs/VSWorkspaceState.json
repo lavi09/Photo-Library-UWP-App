@@ -1,6 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\PhotoLib",
+    "\\PhotoLib\\PhotoLib"
   ],
+  "SelectedNode": "\\PhotoLib\\PhotoLib\\MainPage.xaml",
   "PreviewInSolutionExplorer": false
 }

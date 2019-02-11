@@ -5,98 +5,42 @@
     xmlns:local="using:PhotoLib"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:muxc="using:Windows.UI.Xaml.Controls"
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-    <Page.Resources>
-    <Style x:Key="AlbumGroupHeaderContainerStyle" TargetType="ListViewHeaderItem">
-        <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
-    </Style>
-    <DataTemplate x:Key="PicTemplate">
-        <Grid Name ="GridPicTemplate "  >
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*" />
-                <ColumnDefinition Width="10*" />
-                <ColumnDefinition Width="*" />
+    
+    <NavigationView x:ConnectionId='1'
+        x:Name="nvTopLevelNav"
+                                             
+                Margin="0,12,0,0"
+                                                                 
+                                                       
+                IsTabStop="False"
+                 Header="My Photos"
+                >                               
+        <NavigationView.MenuItems>
+            <NavigationViewItem Icon="Home" Tag="Home_Page">
+                <TextBlock Tag="Nav_Home">Home</TextBlock>
+            </NavigationViewItem>
+            <NavigationViewItem Icon="Upload" Tag="Upload_Page">
+                <TextBlock Tag="Nav_Upload">Upload</TextBlock>
+            </NavigationViewItem>
+            <NavigationViewItem Icon="Pictures" Tag="Albums_Page">
+                <TextBlock Tag="Nav_Albums">Albums</TextBlock>
+            </NavigationViewItem>
+            <NavigationViewItem Icon="NewFolder" Tag="Folders_Page">
+                <TextBlock Tag="Nav_Folder">Folder</TextBlock>
+            </NavigationViewItem>
+        </NavigationView.MenuItems>
 
-            </Grid.ColumnDefinitions>
-                
-            </Grid>
-        </DataTemplate>
-        <SolidColorBrush x:Key="MyTransparentBackgroundLightGray" Color="Gray" Opacity="0.3" />
-        <SolidColorBrush x:Key="MyTransparentBackgroundWhite" Color="white" Opacity="0.0" />
-    </Page.Resources>
-    <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="*" ></RowDefinition>
-            <RowDefinition Height="*"></RowDefinition>
-            <RowDefinition Height="100"></RowDefinition>
-        </Grid.RowDefinitions>
-        <SplitView x:ConnectionId='3' Grid.Row="0" Grid.RowSpan="2" x:Name="MySplitView" DisplayMode="CompactOverlay"  IsPaneOpen="False" 
-               CompactPaneLength="50" OpenPaneLength="220"                                       Background="{StaticResource MyTransparentBackgroundWhite}">
-            <SplitView.Pane >
-            <StackPanel Background="Transparent">
-                <Button x:ConnectionId='4' x:Name="HamburgerButton" FontFamily="Segoe MDL2 Assets" Content="&#xE700;"
-                    Width="50" Height="50"  BorderThickness="0" Background="Transparent"                              />
-
-                <StackPanel Orientation="Horizontal">
-                        <Button x:ConnectionId='9' x:Name="Search" FontFamily="Segoe MDL2 Assets" Content="&#59166;"
-                        Width="50" Height="50" Background="Transparent"                     />
-
-                        <AutoSuggestBox x:ConnectionId='10' Name="SearchAutoSuggestBox"
-                            PlaceholderText="Search for pics"  FontSize="11" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="10,0,10,10"
-                            Width="200" Height="30"
-                            QueryIcon="Find"
-                           
-                                                                                  Background="White" />
-                    </StackPanel>
-                    <Button x:ConnectionId='5' x:Name="DisplayPicsList"
-                    Width="220" Height="50"  BorderThickness="0" Background="Transparent"                              >
-                        <StackPanel Orientation="Horizontal">
-                            <FontIcon   Margin="5,0,0,0" FontFamily="Segoe MDL2 Assets" FontSize="16"  Glyph="&#xE8B9;"/>
-                            <TextBlock Text="Collections"  Margin="25,0,0,0" FontSize="14" Width="200" VerticalAlignment="Center" />
-                        </StackPanel>
-                    </Button>
-                    <Button x:ConnectionId='6' x:Name="AddPicButton"
-                        Width="220" 
-                        Height="50" 
-                        BorderThickness="0" 
-                        Background="Transparent" 
-                                                  >
-                        <StackPanel Orientation="Horizontal">
-                            <FontIcon Margin="5,0,0,0" FontFamily="Segoe MDL2 Assets" FontSize="16"  Glyph="&#xE898;"/>
-                            <TextBlock Text="Upload"  Margin="25,0,0,0"  Width="200" FontSize="14" VerticalAlignment="Center" />
-                        </StackPanel>
-                    </Button>
-                    <Button x:ConnectionId='7' x:Name="FoldersButton"
-                        Width="220" 
-                        Height="50" 
-                        BorderThickness="0" 
-                        Background="Transparent" 
-                                                     >
-                        <StackPanel Orientation="Horizontal">
-                            <FontIcon Margin="5,0,0,0" FontFamily="Segoe MDL2 Assets" FontSize="16"  Glyph="&#xE8B7;"/>
-                            <TextBlock Text="Folders"  Margin="25,0,0,0"  Width="100" FontSize="14" VerticalAlignment="Center" />
-                            <Button x:ConnectionId='8' x:Name="AddFoldersButton" Background="Transparent" BorderThickness="0"  Margin="5,0,0,0" Width="50" FontFamily="Segoe MDL2 Assets" FontSize="16"  Content="&#59152;"                               />
-                        </StackPanel>
-                    </Button>
-                    
-                </StackPanel>
-            </SplitView.Pane>
-            <StackPanel>
-                <TextBlock Text=" My Photos" Style="{StaticResource SubheaderTextBlockStyle}"/>
-                <Pivot x:ConnectionId='11' RequestedTheme="Light" x:Name="rootPivot"                                                                                               >
-                    <PivotItem Header="Collections"></PivotItem>
-                    <PivotItem Header="Albums"></PivotItem>
-                    <PivotItem Header="Camera"></PivotItem>
+        <NavigationView.AutoSuggestBox>
+            <AutoSuggestBox x:ConnectionId='2' x:Name="NavViewSearchBox" QueryIcon="Find"/>
+        </NavigationView.AutoSuggestBox>
+        <Frame x:ConnectionId='3' x:Name="contentFrame"></Frame>
+    </NavigationView>
+    
 
 
-
-                </Pivot>
-                </StackPanel>
-            </SplitView>
-                    
-        
-    </Grid>
 
 </Page>
     
