@@ -56,7 +56,7 @@ namespace PhotoLib.PhotoLib_XamlTypeInfo
     /// <summary>
     /// Main class for providing metadata for the app or library
     /// </summary>
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Windows.UI.Xaml.Build.Tasks"," 10.0.17.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Windows.UI.Xaml.Build.Tasks"," 10.0.16.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     public sealed class XamlMetaDataProvider : global::Windows.UI.Xaml.Markup.IXamlMetadataProvider
     {
@@ -99,29 +99,26 @@ namespace PhotoLib.PhotoLib_XamlTypeInfo
         }
     }
 
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Windows.UI.Xaml.Build.Tasks"," 10.0.17.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Windows.UI.Xaml.Build.Tasks"," 10.0.16.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     internal partial class XamlTypeInfoProvider
     {
         public global::Windows.UI.Xaml.Markup.IXamlType GetXamlTypeByType(global::System.Type type)
         {
             global::Windows.UI.Xaml.Markup.IXamlType xamlType;
-            lock (_xamlTypeCacheByType) 
-            { 
-                if (_xamlTypeCacheByType.TryGetValue(type, out xamlType))
-                {
-                    return xamlType;
-                }
-                int typeIndex = LookupTypeIndexByType(type);
-                if(typeIndex != -1)
-                {
-                    xamlType = CreateXamlType(typeIndex);
-                }
-                if (xamlType != null)
-                {
-                    _xamlTypeCacheByName.Add(xamlType.FullName, xamlType);
-                    _xamlTypeCacheByType.Add(xamlType.UnderlyingType, xamlType);
-                }
+            if (_xamlTypeCacheByType.TryGetValue(type, out xamlType))
+            {
+                return xamlType;
+            }
+            int typeIndex = LookupTypeIndexByType(type);
+            if(typeIndex != -1)
+            {
+                xamlType = CreateXamlType(typeIndex);
+            }
+            if (xamlType != null)
+            {
+                _xamlTypeCacheByName.Add(xamlType.FullName, xamlType);
+                _xamlTypeCacheByType.Add(xamlType.UnderlyingType, xamlType);
             }
             return xamlType;
         }
@@ -133,22 +130,19 @@ namespace PhotoLib.PhotoLib_XamlTypeInfo
                 return null;
             }
             global::Windows.UI.Xaml.Markup.IXamlType xamlType;
-            lock (_xamlTypeCacheByType)
+            if (_xamlTypeCacheByName.TryGetValue(typeName, out xamlType))
             {
-                if (_xamlTypeCacheByName.TryGetValue(typeName, out xamlType))
-                {
-                    return xamlType;
-                }
-                int typeIndex = LookupTypeIndexByName(typeName);
-                if(typeIndex != -1)
-                {
-                    xamlType = CreateXamlType(typeIndex);
-                }
-                if (xamlType != null)
-                {
-                    _xamlTypeCacheByName.Add(xamlType.FullName, xamlType);
-                    _xamlTypeCacheByType.Add(xamlType.UnderlyingType, xamlType);
-                }
+                return xamlType;
+            }
+            int typeIndex = LookupTypeIndexByName(typeName);
+            if(typeIndex != -1)
+            {
+                xamlType = CreateXamlType(typeIndex);
+            }
+            if (xamlType != null)
+            {
+                _xamlTypeCacheByName.Add(xamlType.FullName, xamlType);
+                _xamlTypeCacheByType.Add(xamlType.UnderlyingType, xamlType);
             }
             return xamlType;
         }
@@ -160,17 +154,14 @@ namespace PhotoLib.PhotoLib_XamlTypeInfo
                 return null;
             }
             global::Windows.UI.Xaml.Markup.IXamlMember xamlMember;
-            lock (_xamlMembers)
+            if (_xamlMembers.TryGetValue(longMemberName, out xamlMember))
             {
-                if (_xamlMembers.TryGetValue(longMemberName, out xamlMember))
-                {
-                    return xamlMember;
-                }
-                xamlMember = CreateXamlMember(longMemberName);
-                if (xamlMember != null)
-                {
-                    _xamlMembers.Add(longMemberName, xamlMember);
-                }
+                return xamlMember;
+            }
+            xamlMember = CreateXamlMember(longMemberName);
+            if (xamlMember != null)
+            {
+                _xamlMembers.Add(longMemberName, xamlMember);
             }
             return xamlMember;
         }
@@ -189,15 +180,23 @@ namespace PhotoLib.PhotoLib_XamlTypeInfo
 
         private void InitTypeTables()
         {
-            _typeNameTable = new string[3];
+            _typeNameTable = new string[7];
             _typeNameTable[0] = "PhotoLib.MainPage";
             _typeNameTable[1] = "Windows.UI.Xaml.Controls.Page";
             _typeNameTable[2] = "Windows.UI.Xaml.Controls.UserControl";
+            _typeNameTable[3] = "PhotoLib.views.albums";
+            _typeNameTable[4] = "PhotoLib.views.folders";
+            _typeNameTable[5] = "PhotoLib.views.Home";
+            _typeNameTable[6] = "PhotoLib.views.Upload";
 
-            _typeTable = new global::System.Type[3];
+            _typeTable = new global::System.Type[7];
             _typeTable[0] = typeof(global::PhotoLib.MainPage);
             _typeTable[1] = typeof(global::Windows.UI.Xaml.Controls.Page);
             _typeTable[2] = typeof(global::Windows.UI.Xaml.Controls.UserControl);
+            _typeTable[3] = typeof(global::PhotoLib.views.albums);
+            _typeTable[4] = typeof(global::PhotoLib.views.folders);
+            _typeTable[5] = typeof(global::PhotoLib.views.Home);
+            _typeTable[6] = typeof(global::PhotoLib.views.Upload);
         }
 
         private int LookupTypeIndexByName(string typeName)
@@ -233,6 +232,10 @@ namespace PhotoLib.PhotoLib_XamlTypeInfo
         }
 
         private object Activate_0_MainPage() { return new global::PhotoLib.MainPage(); }
+        private object Activate_3_albums() { return new global::PhotoLib.views.albums(); }
+        private object Activate_4_folders() { return new global::PhotoLib.views.folders(); }
+        private object Activate_5_Home() { return new global::PhotoLib.views.Home(); }
+        private object Activate_6_Upload() { return new global::PhotoLib.views.Upload(); }
 
         private global::Windows.UI.Xaml.Markup.IXamlType CreateXamlType(int typeIndex)
         {
@@ -258,6 +261,34 @@ namespace PhotoLib.PhotoLib_XamlTypeInfo
             case 2:   //  Windows.UI.Xaml.Controls.UserControl
                 xamlType = new global::PhotoLib.PhotoLib_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
+
+            case 3:   //  PhotoLib.views.albums
+                userType = new global::PhotoLib.PhotoLib_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_3_albums;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 4:   //  PhotoLib.views.folders
+                userType = new global::PhotoLib.PhotoLib_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_4_folders;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 5:   //  PhotoLib.views.Home
+                userType = new global::PhotoLib.PhotoLib_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_5_Home;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 6:   //  PhotoLib.views.Upload
+                userType = new global::PhotoLib.PhotoLib_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_6_Upload;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
             }
             return xamlType;
         }
@@ -272,7 +303,7 @@ namespace PhotoLib.PhotoLib_XamlTypeInfo
         }
     }
 
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Windows.UI.Xaml.Build.Tasks"," 10.0.17.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Windows.UI.Xaml.Build.Tasks"," 10.0.16.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     internal class XamlSystemBaseType : global::Windows.UI.Xaml.Markup.IXamlType
     {
@@ -320,7 +351,7 @@ namespace PhotoLib.PhotoLib_XamlTypeInfo
     internal delegate void AddToDictionary(object instance, object key, object item);
     internal delegate object CreateFromStringMethod(string args);
 
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Windows.UI.Xaml.Build.Tasks"," 10.0.17.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Windows.UI.Xaml.Build.Tasks"," 10.0.16.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     internal class XamlUserType : global::PhotoLib.PhotoLib_XamlTypeInfo.XamlSystemBaseType
     {
@@ -531,7 +562,7 @@ namespace PhotoLib.PhotoLib_XamlTypeInfo
     internal delegate object Getter(object instance);
     internal delegate void Setter(object instance, object value);
 
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Windows.UI.Xaml.Build.Tasks"," 10.0.17.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Windows.UI.Xaml.Build.Tasks"," 10.0.16.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     internal class XamlMember : global::Windows.UI.Xaml.Markup.IXamlMember
     {

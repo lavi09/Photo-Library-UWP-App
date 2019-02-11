@@ -9,4 +9,8 @@ Assets\Wide310x150Logo.scale-200.png
 App.xbf
 MainPage.xbf
 PhotoLib.xr.xml
+views\albums.xbf
+views\folders.xbf
+views\Home.xbf
+views\Upload.xbf
 Properties\Default.rd.xml
