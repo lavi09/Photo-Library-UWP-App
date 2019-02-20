@@ -67,20 +67,11 @@
     <AppxPackagedFile Include="C:\Users\Administrator\source\repos\Assignment-1\PhotoLib\PhotoLib\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Administrator\source\repos\Assignment-1\PhotoLib\PhotoLib\bin\x86\Debug\MainPage.xbf">
-      <PackagePath>MainPage.xbf</PackagePath>
+    <AppxPackagedFile Include="C:\Users\Administrator\source\repos\Assignment-1\PhotoLib\PhotoLib\bin\x86\Debug\app dialog\PicContentDialog.xbf">
+      <PackagePath>app dialog\PicContentDialog.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Administrator\source\repos\Assignment-1\PhotoLib\PhotoLib\bin\x86\Debug\views\albums.xbf">
-      <PackagePath>views\albums.xbf</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Administrator\source\repos\Assignment-1\PhotoLib\PhotoLib\bin\x86\Debug\views\folders.xbf">
-      <PackagePath>views\folders.xbf</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Administrator\source\repos\Assignment-1\PhotoLib\PhotoLib\bin\x86\Debug\views\Home.xbf">
-      <PackagePath>views\Home.xbf</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Administrator\source\repos\Assignment-1\PhotoLib\PhotoLib\bin\x86\Debug\views\Upload.xbf">
-      <PackagePath>views\Upload.xbf</PackagePath>
+    <AppxPackagedFile Include="C:\Users\Administrator\source\repos\Assignment-1\PhotoLib\PhotoLib\bin\x86\Debug\views\MainPage.xbf">
+      <PackagePath>views\MainPage.xbf</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.16299.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>

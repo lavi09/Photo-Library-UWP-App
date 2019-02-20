@@ -217,7 +217,6 @@ C:\Users\Administrator\source\repos\PhotoLib\PhotoLib\obj\x86\Debug\qualifiers.t
 C:\Users\Administrator\source\repos\PhotoLib\PhotoLib\obj\x86\Debug\MultipleQualifiersPerDimensionFound.txt
 C:\Users\Administrator\source\repos\PhotoLib\PhotoLib\obj\x86\Debug\ProjectArchitectures.txt
 C:\Users\Administrator\Source\Repos\Assignment-1\PhotoLib\PhotoLib\bin\x86\Debug\App.xbf
-C:\Users\Administrator\Source\Repos\Assignment-1\PhotoLib\PhotoLib\bin\x86\Debug\MainPage.xbf
 C:\Users\Administrator\Source\Repos\Assignment-1\PhotoLib\PhotoLib\bin\x86\Debug\PhotoLib.xr.xml
 C:\Users\Administrator\Source\Repos\Assignment-1\PhotoLib\PhotoLib\bin\x86\Debug\PhotoLib.exe
 C:\Users\Administrator\Source\Repos\Assignment-1\PhotoLib\PhotoLib\bin\x86\Debug\PhotoLib.pdb
@@ -230,13 +229,9 @@ C:\Users\Administrator\Source\Repos\Assignment-1\PhotoLib\PhotoLib\bin\x86\Debug
 C:\Users\Administrator\Source\Repos\Assignment-1\PhotoLib\PhotoLib\obj\x86\Debug\PhotoLib.csprojAssemblyReference.cache
 C:\Users\Administrator\Source\Repos\Assignment-1\PhotoLib\PhotoLib\obj\x86\Debug\App.g.i.cs
 C:\Users\Administrator\Source\Repos\Assignment-1\PhotoLib\PhotoLib\obj\x86\Debug\App.g.cs
-C:\Users\Administrator\Source\Repos\Assignment-1\PhotoLib\PhotoLib\obj\x86\Debug\MainPage.g.i.cs
-C:\Users\Administrator\Source\Repos\Assignment-1\PhotoLib\PhotoLib\obj\x86\Debug\MainPage.g.cs
 C:\Users\Administrator\Source\Repos\Assignment-1\PhotoLib\PhotoLib\obj\x86\Debug\XamlTypeInfo.g.cs
 C:\Users\Administrator\Source\Repos\Assignment-1\PhotoLib\PhotoLib\obj\x86\Debug\App.xaml
-C:\Users\Administrator\Source\Repos\Assignment-1\PhotoLib\PhotoLib\obj\x86\Debug\MainPage.xaml
 C:\Users\Administrator\Source\Repos\Assignment-1\PhotoLib\PhotoLib\obj\x86\Debug\App.xbf
-C:\Users\Administrator\Source\Repos\Assignment-1\PhotoLib\PhotoLib\obj\x86\Debug\MainPage.xbf
 C:\Users\Administrator\Source\Repos\Assignment-1\PhotoLib\PhotoLib\obj\x86\Debug\XamlSaveStateFile.xml
 C:\Users\Administrator\Source\Repos\Assignment-1\PhotoLib\PhotoLib\obj\x86\Debug\PhotoLib.csproj.CoreCompileInputs.cache
 C:\Users\Administrator\Source\Repos\Assignment-1\PhotoLib\PhotoLib\obj\x86\Debug\PhotoLib.csproj.CopyComplete
@@ -259,23 +254,13 @@ C:\Users\Administrator\Source\Repos\Assignment-1\PhotoLib\PhotoLib\obj\x86\Debug
 C:\Users\Administrator\Source\Repos\Assignment-1\PhotoLib\PhotoLib\obj\x86\Debug\qualifiers.txt.intermediate
 C:\Users\Administrator\Source\Repos\Assignment-1\PhotoLib\PhotoLib\obj\x86\Debug\MultipleQualifiersPerDimensionFound.txt
 C:\Users\Administrator\Source\Repos\Assignment-1\PhotoLib\PhotoLib\obj\x86\Debug\ProjectArchitectures.txt
-C:\Users\Administrator\source\repos\Assignment-1\PhotoLib\PhotoLib\bin\x86\Debug\views\albums.xbf
-C:\Users\Administrator\source\repos\Assignment-1\PhotoLib\PhotoLib\bin\x86\Debug\views\folders.xbf
-C:\Users\Administrator\source\repos\Assignment-1\PhotoLib\PhotoLib\bin\x86\Debug\views\Home.xbf
-C:\Users\Administrator\source\repos\Assignment-1\PhotoLib\PhotoLib\bin\x86\Debug\views\Upload.xbf
-C:\Users\Administrator\source\repos\Assignment-1\PhotoLib\PhotoLib\obj\x86\Debug\views\albums.g.i.cs
-C:\Users\Administrator\source\repos\Assignment-1\PhotoLib\PhotoLib\obj\x86\Debug\views\albums.g.cs
-C:\Users\Administrator\source\repos\Assignment-1\PhotoLib\PhotoLib\obj\x86\Debug\views\folders.g.i.cs
-C:\Users\Administrator\source\repos\Assignment-1\PhotoLib\PhotoLib\obj\x86\Debug\views\folders.g.cs
-C:\Users\Administrator\source\repos\Assignment-1\PhotoLib\PhotoLib\obj\x86\Debug\views\Home.g.i.cs
-C:\Users\Administrator\source\repos\Assignment-1\PhotoLib\PhotoLib\obj\x86\Debug\views\Home.g.cs
-C:\Users\Administrator\source\repos\Assignment-1\PhotoLib\PhotoLib\obj\x86\Debug\views\Upload.g.i.cs
-C:\Users\Administrator\source\repos\Assignment-1\PhotoLib\PhotoLib\obj\x86\Debug\views\Upload.g.cs
-C:\Users\Administrator\source\repos\Assignment-1\PhotoLib\PhotoLib\obj\x86\Debug\views\albums.xaml
-C:\Users\Administrator\source\repos\Assignment-1\PhotoLib\PhotoLib\obj\x86\Debug\views\folders.xaml
-C:\Users\Administrator\source\repos\Assignment-1\PhotoLib\PhotoLib\obj\x86\Debug\views\Home.xaml
-C:\Users\Administrator\source\repos\Assignment-1\PhotoLib\PhotoLib\obj\x86\Debug\views\Upload.xaml
-C:\Users\Administrator\source\repos\Assignment-1\PhotoLib\PhotoLib\obj\x86\Debug\views\albums.xbf
-C:\Users\Administrator\source\repos\Assignment-1\PhotoLib\PhotoLib\obj\x86\Debug\views\folders.xbf
-C:\Users\Administrator\source\repos\Assignment-1\PhotoLib\PhotoLib\obj\x86\Debug\views\Home.xbf
-C:\Users\Administrator\source\repos\Assignment-1\PhotoLib\PhotoLib\obj\x86\Debug\views\Upload.xbf
+C:\Users\Administrator\Source\Repos\Assignment-1\PhotoLib\PhotoLib\obj\x86\Debug\app dialog\PicContentDialog.g.i.cs
+C:\Users\Administrator\Source\Repos\Assignment-1\PhotoLib\PhotoLib\obj\x86\Debug\app dialog\PicContentDialog.g.cs
+C:\Users\Administrator\Source\Repos\Assignment-1\PhotoLib\PhotoLib\obj\x86\Debug\views\MainPage.g.i.cs
+C:\Users\Administrator\Source\Repos\Assignment-1\PhotoLib\PhotoLib\obj\x86\Debug\views\MainPage.g.cs
+C:\Users\Administrator\Source\Repos\Assignment-1\PhotoLib\PhotoLib\obj\x86\Debug\app dialog\PicContentDialog.xaml
+C:\Users\Administrator\Source\Repos\Assignment-1\PhotoLib\PhotoLib\obj\x86\Debug\views\MainPage.xaml
+C:\Users\Administrator\Source\Repos\Assignment-1\PhotoLib\PhotoLib\obj\x86\Debug\app dialog\PicContentDialog.xbf
+C:\Users\Administrator\Source\Repos\Assignment-1\PhotoLib\PhotoLib\obj\x86\Debug\views\MainPage.xbf
+C:\Users\Administrator\Source\Repos\Assignment-1\PhotoLib\PhotoLib\bin\x86\Debug\app dialog\PicContentDialog.xbf
+C:\Users\Administrator\Source\Repos\Assignment-1\PhotoLib\PhotoLib\bin\x86\Debug\views\MainPage.xbf
