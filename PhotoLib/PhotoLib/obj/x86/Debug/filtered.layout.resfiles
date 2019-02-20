@@ -6,11 +6,8 @@ Assets\Square44x44Logo.scale-200.png
 Assets\Square44x44Logo.targetsize-24_altform-unplated.png
 Assets\StoreLogo.png
 Assets\Wide310x150Logo.scale-200.png
+app dialog\PicContentDialog.xbf
 App.xbf
-MainPage.xbf
 PhotoLib.xr.xml
-views\albums.xbf
-views\folders.xbf
-views\Home.xbf
-views\Upload.xbf
+views\MainPage.xbf
 Properties\Default.rd.xml

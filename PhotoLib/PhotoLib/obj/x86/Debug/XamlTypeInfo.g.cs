@@ -180,23 +180,21 @@ namespace PhotoLib.PhotoLib_XamlTypeInfo
 
         private void InitTypeTables()
         {
-            _typeNameTable = new string[7];
-            _typeNameTable[0] = "PhotoLib.MainPage";
-            _typeNameTable[1] = "Windows.UI.Xaml.Controls.Page";
-            _typeNameTable[2] = "Windows.UI.Xaml.Controls.UserControl";
-            _typeNameTable[3] = "PhotoLib.views.albums";
-            _typeNameTable[4] = "PhotoLib.views.folders";
-            _typeNameTable[5] = "PhotoLib.views.Home";
-            _typeNameTable[6] = "PhotoLib.views.Upload";
+            _typeNameTable = new string[6];
+            _typeNameTable[0] = "PhotoLib.app_dialog.PicContentDialog";
+            _typeNameTable[1] = "Windows.UI.Xaml.Controls.ContentDialog";
+            _typeNameTable[2] = "Windows.UI.Xaml.Controls.ContentControl";
+            _typeNameTable[3] = "PhotoLib.MainPage";
+            _typeNameTable[4] = "Windows.UI.Xaml.Controls.Page";
+            _typeNameTable[5] = "Windows.UI.Xaml.Controls.UserControl";
 
-            _typeTable = new global::System.Type[7];
-            _typeTable[0] = typeof(global::PhotoLib.MainPage);
-            _typeTable[1] = typeof(global::Windows.UI.Xaml.Controls.Page);
-            _typeTable[2] = typeof(global::Windows.UI.Xaml.Controls.UserControl);
-            _typeTable[3] = typeof(global::PhotoLib.views.albums);
-            _typeTable[4] = typeof(global::PhotoLib.views.folders);
-            _typeTable[5] = typeof(global::PhotoLib.views.Home);
-            _typeTable[6] = typeof(global::PhotoLib.views.Upload);
+            _typeTable = new global::System.Type[6];
+            _typeTable[0] = typeof(global::PhotoLib.app_dialog.PicContentDialog);
+            _typeTable[1] = typeof(global::Windows.UI.Xaml.Controls.ContentDialog);
+            _typeTable[2] = typeof(global::Windows.UI.Xaml.Controls.ContentControl);
+            _typeTable[3] = typeof(global::PhotoLib.MainPage);
+            _typeTable[4] = typeof(global::Windows.UI.Xaml.Controls.Page);
+            _typeTable[5] = typeof(global::Windows.UI.Xaml.Controls.UserControl);
         }
 
         private int LookupTypeIndexByName(string typeName)
@@ -231,11 +229,8 @@ namespace PhotoLib.PhotoLib_XamlTypeInfo
             return -1;
         }
 
-        private object Activate_0_MainPage() { return new global::PhotoLib.MainPage(); }
-        private object Activate_3_albums() { return new global::PhotoLib.views.albums(); }
-        private object Activate_4_folders() { return new global::PhotoLib.views.folders(); }
-        private object Activate_5_Home() { return new global::PhotoLib.views.Home(); }
-        private object Activate_6_Upload() { return new global::PhotoLib.views.Upload(); }
+        private object Activate_0_PicContentDialog() { return new global::PhotoLib.app_dialog.PicContentDialog(); }
+        private object Activate_3_MainPage() { return new global::PhotoLib.MainPage(); }
 
         private global::Windows.UI.Xaml.Markup.IXamlType CreateXamlType(int typeIndex)
         {
@@ -247,47 +242,34 @@ namespace PhotoLib.PhotoLib_XamlTypeInfo
             switch (typeIndex)
             {
 
-            case 0:   //  PhotoLib.MainPage
-                userType = new global::PhotoLib.PhotoLib_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_0_MainPage;
+            case 0:   //  PhotoLib.app_dialog.PicContentDialog
+                userType = new global::PhotoLib.PhotoLib_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.ContentDialog"));
+                userType.Activator = Activate_0_PicContentDialog;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 1:   //  Windows.UI.Xaml.Controls.Page
+            case 1:   //  Windows.UI.Xaml.Controls.ContentDialog
                 xamlType = new global::PhotoLib.PhotoLib_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 2:   //  Windows.UI.Xaml.Controls.UserControl
+            case 2:   //  Windows.UI.Xaml.Controls.ContentControl
                 xamlType = new global::PhotoLib.PhotoLib_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 3:   //  PhotoLib.views.albums
+            case 3:   //  PhotoLib.MainPage
                 userType = new global::PhotoLib.PhotoLib_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_3_albums;
+                userType.Activator = Activate_3_MainPage;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 4:   //  PhotoLib.views.folders
-                userType = new global::PhotoLib.PhotoLib_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_4_folders;
-                userType.SetIsLocalType();
-                xamlType = userType;
+            case 4:   //  Windows.UI.Xaml.Controls.Page
+                xamlType = new global::PhotoLib.PhotoLib_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 5:   //  PhotoLib.views.Home
-                userType = new global::PhotoLib.PhotoLib_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_5_Home;
-                userType.SetIsLocalType();
-                xamlType = userType;
-                break;
-
-            case 6:   //  PhotoLib.views.Upload
-                userType = new global::PhotoLib.PhotoLib_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_6_Upload;
-                userType.SetIsLocalType();
-                xamlType = userType;
+            case 5:   //  Windows.UI.Xaml.Controls.UserControl
+                xamlType = new global::PhotoLib.PhotoLib_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
             }
             return xamlType;
