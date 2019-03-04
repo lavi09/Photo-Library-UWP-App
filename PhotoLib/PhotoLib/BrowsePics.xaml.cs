@@ -15,15 +15,15 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 
+// The Content Dialog item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
-
-namespace PhotoLib.app_dialog
+namespace PhotoLib
 {
-    public sealed partial class PicContentDialog : ContentDialog
+    public sealed partial class BrowsePics : ContentDialog
     {
         private IReadOnlyList<StorageFile> pickedFileList;
 
-        public PicContentDialog()
+        public BrowsePics()
         {
             this.InitializeComponent();
         }
@@ -40,7 +40,7 @@ namespace PhotoLib.app_dialog
 
                 };
 
-               Images.AddImageAsync(image);
+                Images.AddImageAsync(image);
             }
         }
 
@@ -60,6 +60,7 @@ namespace PhotoLib.app_dialog
             picker.FileTypeFilter.Add(".png");
             picker.FileTypeFilter.Add(".gif");
             picker.FileTypeFilter.Add(".jpeg");
+            picker.FileTypeFilter.Add(".mp4");
             pickedFileList = await picker.PickMultipleFilesAsync();
 
             if (pickedFileList != null && pickedFileList.Count > 0)

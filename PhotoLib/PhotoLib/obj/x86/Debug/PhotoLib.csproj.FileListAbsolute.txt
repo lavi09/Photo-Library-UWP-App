@@ -264,3 +264,27 @@ C:\Users\Administrator\Source\Repos\Assignment-1\PhotoLib\PhotoLib\obj\x86\Debug
 C:\Users\Administrator\Source\Repos\Assignment-1\PhotoLib\PhotoLib\obj\x86\Debug\views\MainPage.xbf
 C:\Users\Administrator\Source\Repos\Assignment-1\PhotoLib\PhotoLib\bin\x86\Debug\app dialog\PicContentDialog.xbf
 C:\Users\Administrator\Source\Repos\Assignment-1\PhotoLib\PhotoLib\bin\x86\Debug\views\MainPage.xbf
+C:\Users\Administrator\source\repos\Assignment-1\PhotoLib\PhotoLib\obj\x86\Debug\Album.g.i.cs
+C:\Users\Administrator\source\repos\Assignment-1\PhotoLib\PhotoLib\obj\x86\Debug\Album.g.cs
+C:\Users\Administrator\source\repos\Assignment-1\PhotoLib\PhotoLib\obj\x86\Debug\Camera.g.i.cs
+C:\Users\Administrator\source\repos\Assignment-1\PhotoLib\PhotoLib\obj\x86\Debug\Camera.g.cs
+C:\Users\Administrator\source\repos\Assignment-1\PhotoLib\PhotoLib\obj\x86\Debug\Album.xaml
+C:\Users\Administrator\source\repos\Assignment-1\PhotoLib\PhotoLib\obj\x86\Debug\Camera.xaml
+C:\Users\Administrator\source\repos\Assignment-1\PhotoLib\PhotoLib\obj\x86\Debug\Album.xbf
+C:\Users\Administrator\source\repos\Assignment-1\PhotoLib\PhotoLib\obj\x86\Debug\Camera.xbf
+C:\Users\Administrator\source\repos\Assignment-1\PhotoLib\PhotoLib\obj\x86\Debug\BrowsePics.g.i.cs
+C:\Users\Administrator\source\repos\Assignment-1\PhotoLib\PhotoLib\obj\x86\Debug\BrowsePics.g.cs
+C:\Users\Administrator\source\repos\Assignment-1\PhotoLib\PhotoLib\obj\x86\Debug\CreateAlbum.g.i.cs
+C:\Users\Administrator\source\repos\Assignment-1\PhotoLib\PhotoLib\obj\x86\Debug\CreateAlbum.g.cs
+C:\Users\Administrator\source\repos\Assignment-1\PhotoLib\PhotoLib\obj\x86\Debug\FullsizeImage.g.i.cs
+C:\Users\Administrator\source\repos\Assignment-1\PhotoLib\PhotoLib\obj\x86\Debug\FullsizeImage.g.cs
+C:\Users\Administrator\source\repos\Assignment-1\PhotoLib\PhotoLib\obj\x86\Debug\MainPage.g.i.cs
+C:\Users\Administrator\source\repos\Assignment-1\PhotoLib\PhotoLib\obj\x86\Debug\MainPage.g.cs
+C:\Users\Administrator\source\repos\Assignment-1\PhotoLib\PhotoLib\obj\x86\Debug\BrowsePics.xaml
+C:\Users\Administrator\source\repos\Assignment-1\PhotoLib\PhotoLib\obj\x86\Debug\CreateAlbum.xaml
+C:\Users\Administrator\source\repos\Assignment-1\PhotoLib\PhotoLib\obj\x86\Debug\FullsizeImage.xaml
+C:\Users\Administrator\source\repos\Assignment-1\PhotoLib\PhotoLib\obj\x86\Debug\MainPage.xaml
+C:\Users\Administrator\source\repos\Assignment-1\PhotoLib\PhotoLib\obj\x86\Debug\BrowsePics.xbf
+C:\Users\Administrator\source\repos\Assignment-1\PhotoLib\PhotoLib\obj\x86\Debug\CreateAlbum.xbf
+C:\Users\Administrator\source\repos\Assignment-1\PhotoLib\PhotoLib\obj\x86\Debug\FullsizeImage.xbf
+C:\Users\Administrator\source\repos\Assignment-1\PhotoLib\PhotoLib\obj\x86\Debug\MainPage.xbf
