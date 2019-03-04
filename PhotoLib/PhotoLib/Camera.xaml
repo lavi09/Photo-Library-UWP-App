@@ -10,12 +10,13 @@
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="Auto" MinWidth="392"/>
-            <ColumnDefinition Width="184"/>
-            <ColumnDefinition Width="894"/>
+            <ColumnDefinition Width="260"/>
+            <ColumnDefinition Width="188"/>
+            <ColumnDefinition Width="385"/>
+            <ColumnDefinition Width="1379"/>
 
         </Grid.ColumnDefinitions>
-        <StackPanel Grid.Column="0" HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Stretch">
+        <StackPanel Grid.Column="0" Grid.ColumnSpan="2" HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Stretch">
 
             <Button Name="PhotoButton" Background="Gold"  Click="Capture_Click">
                 <Viewbox MaxHeight="40" MaxWidth="40">
@@ -23,7 +24,7 @@
                 </Viewbox>
             </Button>
         </StackPanel>
-        <StackPanel Grid.Column="1" HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Stretch">
+        <StackPanel Grid.Column="1" Margin="25,0,0,0" Grid.ColumnSpan="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
 
             <Button Name="VideoButton" Click="VideoButton_Click">
                 <Viewbox MaxHeight="40" MaxWidth="40">
@@ -31,26 +32,22 @@
                 </Viewbox>
             </Button>
         </StackPanel>
-        <StackPanel Grid.Column="2" HorizontalAlignment="Left" Width="930" Margin="0,0,0,10" Grid.ColumnSpan="3" VerticalAlignment="Stretch">
+        <StackPanel Grid.Column="2" HorizontalAlignment="Left" Width="254" Margin="232,0,0,10" Grid.ColumnSpan="2">
             <Button x:Name="back" Content="BACK" Click="Back_Click" RenderTransformOrigin="4.768,-0.078" HorizontalAlignment="Left" Height="56" VerticalAlignment="Top" Width="62" Margin="41,0,0,0" UseLayoutRounding="False" d:LayoutRounding="Auto" >
-                <Button.RenderTransform>
-                    <CompositeTransform ScaleX="1" Rotation="-0.104"/>
-                </Button.RenderTransform>
-            </Button>
 
-            <Image 
+            </Button>
+        </StackPanel>
+        <Image 
             x:Name="image"
-            RelativePanel.Below="textBlock"
-            Width="1041"
-            Height="810"
-            Margin="-456,0,0,0"
+            Width="456"
+            Height="511"
             HorizontalAlignment="Left"
             VerticalAlignment="Center"
-            Source="ms-appx:///Assets/face_1.png" />
-        </StackPanel>
+            Source="ms-appx:///Assets/face_1.png" Grid.ColumnSpan="3" Margin="224,0,0,0" />
 
-        <Grid x:Name="Output" HorizontalAlignment="Center" VerticalAlignment="Center" Height="1000" Width="392">
-            <MediaElement x:Name="CapturedVideo" HorizontalAlignment="Left" AutoPlay="True" MaxWidth="392"/>
-        </Grid>
+
+        <!--<Grid x:Name="Output" HorizontalAlignment="Center" VerticalAlignment="Center" Height="1000" Width="392">-->
+        <MediaElement x:Name="CapturedVideo" HorizontalAlignment="Left" AutoPlay="True" MaxWidth="392" Width="392" Grid.ColumnSpan="2"/>
+        <!--</Grid>-->
     </Grid>
 </Page>

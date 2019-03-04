@@ -1,5 +1,4 @@
-﻿using PhotoLib;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.IO;
@@ -12,7 +11,7 @@ using Windows.Storage.FileProperties;
 using Windows.UI.Popups;
 using Windows.UI.Xaml.Media.Imaging;
 
-namespace Photolib
+namespace PhotoLib
 {
     class Images
     {

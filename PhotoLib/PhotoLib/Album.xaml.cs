@@ -1,5 +1,4 @@
-﻿using PhotoLib.Model;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -64,6 +63,9 @@ namespace PhotoLib
 
         }
 
-
+        private void Back_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(MainPage));
+        }
     }
 }

@@ -5,7 +5,7 @@
     xmlns:local="using:PhotoLib"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    xmlns:local1="using:Photolib"
+  
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
     
@@ -44,7 +44,7 @@
                 </StackPanel>
                 <ListView x:Name ="AlbumNames" Visibility ="Visible"  ItemsSource ="{x:Bind pi.Albums}"  >
                     <ListView.ItemTemplate>
-                        <DataTemplate x:DataType="local1:Images">
+                        <DataTemplate x:DataType="local:Images">
                             <!--<TextBlock Text="{x:Bind AlbumName}"/>-->
                             <Button Name="albumname" Click="Albumname_Click"  Content="{x:Bind AlbumName}" />
 
