@@ -9,6 +9,7 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
+        <Button Name="Back" Content="Back"  Click="Back_Click" HorizontalAlignment="Left" Height="92" Margin="10,0,0,0" VerticalAlignment="Center" Width="87" RenderTransformOrigin="2.734,-1.125" />
         <FlipView x:Name="flipView1" Width="480" Height="270" 
           BorderBrush="Black" BorderThickness="1">
             <FlipView.ItemTemplate>

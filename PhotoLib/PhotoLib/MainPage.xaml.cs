@@ -24,7 +24,7 @@ using Windows.UI.Xaml.Navigation;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
 
-namespace Photolib
+namespace PhotoLib
 {
 
     public sealed partial class MainPage : Page
@@ -97,7 +97,7 @@ namespace Photolib
 
         private void Camera_Click(object sender, RoutedEventArgs e)
         {
-            Frame.Navigate(typeof(camera));
+            Frame.Navigate(typeof(Camera));
         }
 
         private void ImageGridView_ItemClick(object sender, ItemClickEventArgs e)
@@ -150,7 +150,7 @@ namespace Photolib
                     return;
                 }
 
-                pi.AddAlbum(new Pictures
+                pi.AddAlbum(new Images
                 {
                     AlbumName = plname.ToString(),
 

@@ -9,7 +9,11 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
-        <GridView  Name="AlbumImagesGridview"  ItemsSource="{x:Bind pi.ImageList}" IsItemClickEnabled="True" ItemClick="AlbumImagesGridview_ItemClick">
+        <StackPanel>
+            <Button Name="Back" Content="Back"  Click="Back_Click"  HorizontalAlignment="Left" Height="92" Margin="10,0,0,0" VerticalAlignment="Center" /> 
+        </StackPanel>
+        <StackPanel>
+            <GridView  Name="AlbumImagesGridview"  ItemsSource="{x:Bind pi.ImageList}" IsItemClickEnabled="True" ItemClick="AlbumImagesGridview_ItemClick">
 
             <GridView.ItemTemplate >
                 <DataTemplate x:DataType="local:Images">
@@ -29,5 +33,6 @@
                 </DataTemplate>
             </GridView.ItemTemplate>
         </GridView>
+        </StackPanel>
     </Grid>
 </Page>
