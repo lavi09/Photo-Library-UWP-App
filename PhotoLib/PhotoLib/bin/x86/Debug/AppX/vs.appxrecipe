@@ -30,13 +30,13 @@
     <AppXManifest Include="C:\Users\Administrator\source\repos\Assignment-1\PhotoLib\PhotoLib\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2019-02-20T19:54:14.194</Modified>
+      <Modified>2019-02-25T23:55:57.233</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\Administrator\source\repos\Assignment-1\PhotoLib\PhotoLib\bin\x86\Debug\PhotoLib.exe">
       <PackagePath>entrypoint\PhotoLib.exe</PackagePath>
-      <Modified>2019-02-20T19:54:12.764</Modified>
+      <Modified>2019-02-25T23:55:56.222</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.2.3\runtimes\win10-x86\lib\uap10.0.15138\System.Runtime.dll">
       <PackagePath>System.Runtime.dll</PackagePath>
@@ -82,19 +82,19 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Administrator\source\repos\Assignment-1\PhotoLib\PhotoLib\bin\x86\Debug\PhotoLib.xr.xml">
       <PackagePath>PhotoLib.xr.xml</PackagePath>
-      <Modified>2019-02-20T19:54:12.413</Modified>
+      <Modified>2019-02-21T19:09:12.133</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Administrator\source\repos\Assignment-1\PhotoLib\PhotoLib\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2019-02-20T19:54:12.482</Modified>
+      <Modified>2019-02-25T23:55:55.973</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Administrator\source\repos\Assignment-1\PhotoLib\PhotoLib\bin\x86\Debug\app dialog\PicContentDialog.xbf">
       <PackagePath>app dialog\PicContentDialog.xbf</PackagePath>
-      <Modified>2019-02-20T19:54:12.484</Modified>
+      <Modified>2019-02-25T23:55:55.973</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Administrator\source\repos\Assignment-1\PhotoLib\PhotoLib\bin\x86\Debug\views\MainPage.xbf">
       <PackagePath>views\MainPage.xbf</PackagePath>
-      <Modified>2019-02-20T19:54:12.484</Modified>
+      <Modified>2019-02-25T23:55:55.974</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.16299.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -102,11 +102,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Administrator\source\repos\Assignment-1\PhotoLib\PhotoLib\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2019-02-20T19:54:13.299</Modified>
+      <Modified>2019-02-25T23:55:56.457</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Administrator\source\repos\Assignment-1\PhotoLib\PhotoLib\bin\x86\Debug\Core\PhotoLib.exe">
       <PackagePath>PhotoLib.exe</PackagePath>
-      <Modified>2019-02-20T19:54:14.176</Modified>
+      <Modified>2019-02-25T23:55:57.225</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

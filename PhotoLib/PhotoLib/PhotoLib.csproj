@@ -116,17 +116,29 @@
     <RestoreProjectStyle>PackageReference</RestoreProjectStyle>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="FileHelper.cs" />
-    <Compile Include="app dialog\PicContentDialog.xaml.cs">
-      <DependentUpon>PicContentDialog.xaml</DependentUpon>
+    <Compile Include="Album.xaml.cs">
+      <DependentUpon>Album.xaml</DependentUpon>
     </Compile>
+    <Compile Include="BrowsePics.xaml.cs">
+      <DependentUpon>BrowsePics.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Camera.xaml.cs">
+      <DependentUpon>Camera.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CreateAlbum.xaml.cs">
+      <DependentUpon>CreateAlbum.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FileHelper.cs" />
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
-    <Compile Include="views\MainPage.xaml.cs">
+    <Compile Include="FullsizeImage.xaml.cs">
+      <DependentUpon>FullsizeImage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Images.cs" />
+    <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Model\Images.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -150,13 +162,29 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="app dialog\PicContentDialog.xaml">
+    <Page Include="Album.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="views\MainPage.xaml">
-      <Generator>MSBuild:Compile</Generator>
+    <Page Include="BrowsePics.xaml">
       <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Camera.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CreateAlbum.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="FullsizeImage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
   <ItemGroup>
@@ -164,7 +192,9 @@
       <Version>6.2.3</Version>
     </PackageReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="app dialog\" />
+  </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
   </PropertyGroup>

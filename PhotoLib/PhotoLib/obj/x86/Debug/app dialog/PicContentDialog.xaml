@@ -21,12 +21,11 @@
 
         <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
             <TextBox x:ConnectionId='2' x:Name="Image"
-            Width="206"
-            Height="38"
-            Margin="10,10,0,0"
+            Width="272"
+            Height="48"
             PlaceholderText="Browse To Select Pictures"
             HorizontalAlignment="Center"
-            VerticalAlignment="Center"/>
+            VerticalAlignment="Center" Margin="0,0,0,0"/>
 
             <Button x:ConnectionId='3' x:Name="Browse"
             Width="88"

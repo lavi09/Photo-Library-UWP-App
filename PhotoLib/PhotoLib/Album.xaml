@@ -1,0 +1,33 @@
+﻿<Page
+    x:Class="PhotoLib.Album"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:PhotoLib"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <GridView  Name="AlbumImagesGridview"  ItemsSource="{x:Bind pi.ImageList}" IsItemClickEnabled="True" ItemClick="AlbumImagesGridview_ItemClick">
+
+            <GridView.ItemTemplate >
+                <DataTemplate x:DataType="local:Images">
+                    <StackPanel  Margin ="10" Name="Display">
+                        <Image Name="AlbumImage" Margin="6" Width="150" Height="150" Source="{x:Bind Collection}" Stretch="Fill" IsTapEnabled="True" Tapped="AlbumImage_Tapped" >
+                            <FlyoutBase.AttachedFlyout>
+                                <MenuFlyout>
+                                    <MenuFlyoutItem Text="Add" Icon="Add" Click="MenuFlyoutItem_Click">
+                                    </MenuFlyoutItem>
+                                </MenuFlyout>
+                            </FlyoutBase.AttachedFlyout>
+
+                        </Image>
+                        <TextBlock TextAlignment="Center" FontSize="14"  Text="{Binding Name}" TextWrapping="Wrap" FontWeight="SemiBold"></TextBlock>
+
+                    </StackPanel>
+                </DataTemplate>
+            </GridView.ItemTemplate>
+        </GridView>
+    </Grid>
+</Page>

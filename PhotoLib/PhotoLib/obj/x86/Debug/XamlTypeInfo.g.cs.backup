@@ -180,23 +180,21 @@ namespace PhotoLib.PhotoLib_XamlTypeInfo
 
         private void InitTypeTables()
         {
-            _typeNameTable = new string[7];
+            _typeNameTable = new string[6];
             _typeNameTable[0] = "PhotoLib.app_dialog.PicContentDialog";
             _typeNameTable[1] = "Windows.UI.Xaml.Controls.ContentDialog";
             _typeNameTable[2] = "Windows.UI.Xaml.Controls.ContentControl";
-            _typeNameTable[3] = "PhotoLib.camera";
+            _typeNameTable[3] = "PhotoLib.MainPage";
             _typeNameTable[4] = "Windows.UI.Xaml.Controls.Page";
             _typeNameTable[5] = "Windows.UI.Xaml.Controls.UserControl";
-            _typeNameTable[6] = "PhotoLib.MainPage";
 
-            _typeTable = new global::System.Type[7];
+            _typeTable = new global::System.Type[6];
             _typeTable[0] = typeof(global::PhotoLib.app_dialog.PicContentDialog);
             _typeTable[1] = typeof(global::Windows.UI.Xaml.Controls.ContentDialog);
             _typeTable[2] = typeof(global::Windows.UI.Xaml.Controls.ContentControl);
-            _typeTable[3] = typeof(global::PhotoLib.camera);
+            _typeTable[3] = typeof(global::PhotoLib.MainPage);
             _typeTable[4] = typeof(global::Windows.UI.Xaml.Controls.Page);
             _typeTable[5] = typeof(global::Windows.UI.Xaml.Controls.UserControl);
-            _typeTable[6] = typeof(global::PhotoLib.MainPage);
         }
 
         private int LookupTypeIndexByName(string typeName)
@@ -232,8 +230,7 @@ namespace PhotoLib.PhotoLib_XamlTypeInfo
         }
 
         private object Activate_0_PicContentDialog() { return new global::PhotoLib.app_dialog.PicContentDialog(); }
-        private object Activate_3_camera() { return new global::PhotoLib.camera(); }
-        private object Activate_6_MainPage() { return new global::PhotoLib.MainPage(); }
+        private object Activate_3_MainPage() { return new global::PhotoLib.MainPage(); }
 
         private global::Windows.UI.Xaml.Markup.IXamlType CreateXamlType(int typeIndex)
         {
@@ -260,9 +257,9 @@ namespace PhotoLib.PhotoLib_XamlTypeInfo
                 xamlType = new global::PhotoLib.PhotoLib_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 3:   //  PhotoLib.camera
+            case 3:   //  PhotoLib.MainPage
                 userType = new global::PhotoLib.PhotoLib_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_3_camera;
+                userType.Activator = Activate_3_MainPage;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
@@ -273,13 +270,6 @@ namespace PhotoLib.PhotoLib_XamlTypeInfo
 
             case 5:   //  Windows.UI.Xaml.Controls.UserControl
                 xamlType = new global::PhotoLib.PhotoLib_XamlTypeInfo.XamlSystemBaseType(typeName, type);
-                break;
-
-            case 6:   //  PhotoLib.MainPage
-                userType = new global::PhotoLib.PhotoLib_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_6_MainPage;
-                userType.SetIsLocalType();
-                xamlType = userType;
                 break;
             }
             return xamlType;
