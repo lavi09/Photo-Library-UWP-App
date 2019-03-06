@@ -48,12 +48,10 @@ namespace PhotoLib
             StorageFile fileCopy = await photo.CopyAsync(Windows.Storage.ApplicationData.Current.LocalFolder);
 
             if (photo == null)
-            {
-                // User cancelled photo capture
+            {                
                 return;
             }
 
-            // Otherwise we need to save the temporary file (after doing some clean up if we already have a file)
             if (TemporaryFile != null)
             {
                 await TemporaryFile.DeleteAsync();
