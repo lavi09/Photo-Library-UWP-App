@@ -1,4 +1,4 @@
-﻿<Page
+﻿<Page x:ConnectionId='1'
     x:Class="PhotoLib.FullsizeImage"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
@@ -6,23 +6,27 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
+    RequestedTheme="Dark">
 
     <Grid>
-        <Button x:ConnectionId='1' Name="Back" Content="Back"                     HorizontalAlignment="Left" Height="92" Margin="10,0,0,0" VerticalAlignment="Center" Width="87" RenderTransformOrigin="2.734,-1.125" />
-        <FlipView x:ConnectionId='2' x:Name="flipView1" Width="480" Height="270" 
-          BorderBrush="Black" BorderThickness="1">
+        <Button x:ConnectionId='2' Name="Back"                    HorizontalAlignment="Left" Height="62" Margin="1185,10,0,0" VerticalAlignment="Top" RenderTransformOrigin="2.734,-1.125" Width="46" Background="Black" >
+            <FontIcon   Margin="-46,0,0,0" FontFamily="Segoe MDL2 Assets"  VerticalAlignment="Center" HorizontalAlignment="Left" Glyph="&#xE711;" Height="60" Width="127" />
+        </Button>
+        <FlipView x:ConnectionId='3' x:Name="flipView1"                                
+           Margin="354,0,320,0">
             <FlipView.ItemTemplate>
-                <DataTemplate>
-                    <Grid>
-                        <!--<Image
-                        Width="480" Height="270" Stretch="UniformToFill"
-                       Source="{x:Bind collection}"/>-->
-
-                    </Grid>
+                <DataTemplate                         >
+    
+                    <Image x:ConnectionId='4' Width="600"
+                       Height="1000"
+                                        
+                       Stretch="UniformToFill" />
                 </DataTemplate>
             </FlipView.ItemTemplate>
         </FlipView>
+                
+
     </Grid>
 </Page>
 

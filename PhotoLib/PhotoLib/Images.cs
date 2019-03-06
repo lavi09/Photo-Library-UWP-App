@@ -30,6 +30,7 @@ namespace PhotoLib
         public string videoFileName;
 
         public ObservableCollection<Images> ImageList { get; private set; }
+        public ObservableCollection<Images> VideoImageList { get; private set; }
         public string TempName { get; internal set; }
         public StorageFile Temp1 { get; internal set; }
         public WriteableBitmap Collection1 { get; private set; }
@@ -44,6 +45,7 @@ namespace PhotoLib
         public Images()
         {
             ImageList = new ObservableCollection<Images>();
+            VideoImageList = new ObservableCollection<Images>();
             Albums = new ObservableCollection<Images>();
             
         }
@@ -87,6 +89,7 @@ namespace PhotoLib
         public async void GetAllImagesAsync()
         {
             ImageList.Clear();
+            VideoImageList.Clear();
             var folder = Windows.Storage.ApplicationData.Current.LocalFolder;
             var allFiles = await folder.GetFilesAsync();
             foreach (var file in allFiles)
@@ -131,7 +134,7 @@ namespace PhotoLib
                     };
                     var videoid = await FileHelper.GetImageIDAsync(v, FILE_NAME);
                     v.ID = videoid;
-                    ImageList.Add(v);
+                    VideoImageList.Add(v);
                 }
 
 

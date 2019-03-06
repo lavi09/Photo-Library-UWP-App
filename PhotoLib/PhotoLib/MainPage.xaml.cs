@@ -30,10 +30,12 @@ namespace PhotoLib
     public sealed partial class MainPage : Page
     {
         private Images pi;
-        private MediaPlayer mediaPlayer;
+        
 
+        ObservableCollection<BitmapImage> ImgList = new ObservableCollection<BitmapImage>();
+        private object bitmapImage;
 
-      public MainPage()
+        public MainPage()
         {
             this.InitializeComponent();
             pi = new Images();
@@ -100,23 +102,17 @@ namespace PhotoLib
             Frame.Navigate(typeof(Camera));
         }
 
-        private void ImageGridView_ItemClick(object sender, ItemClickEventArgs e)
+        private async void ImageGridView_ItemClick(object sender, ItemClickEventArgs e)
         {
-            //_mediaPlayerElement.SetMediaPlayer(mediaPlayer);
+            Images imageInContext = (Images)e.ClickedItem;
+            StorageFolder localFolder = ApplicationData.Current.LocalFolder;
+            StorageFile file = await localFolder.GetFileAsync(imageInContext.imageFileName);
+            this.Frame.Navigate(typeof(FullsizeImage),file);
 
-            //Pictures videoInContext = (Pictures)e.ClickedItem;
-
-            //StorageFolder localFolder = ApplicationData.Current.LocalFolder;
-            //StorageFile file = await localFolder.GetFileAsync(videoInContext.videoFileName);
-            //if (file != null && file.ContentType==".mp4" )
-            //{
-            //    IRandomAccessStream fileStream = await file.OpenAsync(FileAccessMode.Read);
-            //    //CapturedVideo.PosterSource(fileStream, file.ContentType);
-            //    _mediaPlayerElement.Source= MediaSource.CreateFromStream(fileStream, file.ContentType);
-            //    mediaPlayer = _mediaPlayerElement.MediaPlayer;
-            //    mediaPlayer.Play();
-            //}
-            this.Frame.Navigate(typeof(FullsizeImage));
+        }
+        private void ImageGridView_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+             
 
         }
         private void DisplayAlbumsList_Click(object sender, RoutedEventArgs e)
@@ -169,6 +165,48 @@ namespace PhotoLib
 
         }
 
+        private async void VideoImageGridView_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            //_mediaPlayerElement.SetMediaPlayer(mediaPlayer);
+            MyMediaElement.Visibility = Visibility.Visible;
+            Images videoInContext = (Images)e.ClickedItem;
 
+            StorageFolder localFolder = ApplicationData.Current.LocalFolder;
+            StorageFile file = await localFolder.GetFileAsync(videoInContext.videoFileName);
+            if (file != null)
+            {
+                IRandomAccessStream fileStream = await file.OpenAsync(FileAccessMode.Read);
+               // _mediaPlayerElement.Source = MediaSource.CreateFromStream(fileStream, file.ContentType);
+                MyMediaElement.SetSource(fileStream, file.ContentType);
+            }
+            MyMediaElement.AutoPlay = true;
+            //mediaPlayer = _mediaPlayerElement.MediaPlayer;
+            //mediaPlayer.Play();
+
+        }
+
+        private async void VideoImageGridView_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+          
+            var count = e.AddedItems.Count;
+            if (count > 0)
+            {
+                Images videoInContext = (Images)e.AddedItems.ElementAt(count - 1);
+
+                StorageFolder localFolder = ApplicationData.Current.LocalFolder;
+                StorageFile file = await localFolder.GetFileAsync(videoInContext.videoFileName);
+                if (file != null)
+                {
+                    IRandomAccessStream fileStream = await file.OpenAsync(FileAccessMode.Read);
+                    //_mediaPlayerElement.Source = MediaSource.CreateFromStream(fileStream, file.ContentType);
+                    MyMediaElement.SetSource(fileStream, file.ContentType);
+                }
+                //mediaPlayer = _mediaPlayerElement.MediaPlayer;
+                //mediaPlayer.Play();
+                MyMediaElement.AutoPlay = true;
+            }
+        }
+
+        
     }
 }
