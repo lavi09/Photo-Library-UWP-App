@@ -9,30 +9,19 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
-        <StackPanel>
-            <Button Name="Back" Content="Back"  Click="Back_Click"  HorizontalAlignment="Left" Height="92" Margin="10,0,0,0" VerticalAlignment="Center" /> 
-        </StackPanel>
-        <StackPanel>
-            <GridView  Name="AlbumImagesGridview"  ItemsSource="{x:Bind pi.ImageList}" IsItemClickEnabled="True" ItemClick="AlbumImagesGridview_ItemClick">
-
-            <GridView.ItemTemplate >
-                <DataTemplate x:DataType="local:Images">
-                    <StackPanel  Margin ="10" Name="Display">
-                        <Image Name="AlbumImage" Margin="6" Width="150" Height="150" Source="{x:Bind Collection}" Stretch="Fill" IsTapEnabled="True" Tapped="AlbumImage_Tapped" >
-                            <FlyoutBase.AttachedFlyout>
-                                <MenuFlyout>
-                                    <MenuFlyoutItem Text="Add" Icon="Add" Click="MenuFlyoutItem_Click">
-                                    </MenuFlyoutItem>
-                                </MenuFlyout>
-                            </FlyoutBase.AttachedFlyout>
-
-                        </Image>
-                        <TextBlock TextAlignment="Center" FontSize="14"  Text="{Binding Name}" TextWrapping="Wrap" FontWeight="SemiBold"></TextBlock>
-
-                    </StackPanel>
-                </DataTemplate>
-            </GridView.ItemTemplate>
-        </GridView>
+        <TextBlock  Text="Tap on Picture to add in Album " FontFamily="Microsoft Sans Serif" FontSize="16" FontWeight="Normal" FontStyle="Italic" FocusVisualPrimaryBrush="#FFC6D4D8" HorizontalAlignment="Left" Margin="0,70,0,0" Width="491" />
+        <StackPanel Orientation="Vertical" Margin="0,160,0,0">
+            <GridView  Name="AlbumImagesGridview"  ItemsSource="{x:Bind pi.ImageList}" IsItemClickEnabled="True" ItemClick="AlbumImagesGridview_ItemClick" Height="791">
+                <GridView.ItemTemplate >
+                    <DataTemplate x:DataType="local:Images">
+                        <StackPanel  Margin ="10" Name="Display">
+                            <Image Name="AlbumImage" Margin="6" Width="150" Height="150" Source="{x:Bind Collection}" Stretch="Fill" >
+                            </Image>
+                            <TextBlock TextAlignment="Center" FontSize="14"  Text="{Binding Name}" TextWrapping="Wrap" FontWeight="SemiBold"></TextBlock>
+                        </StackPanel>
+                    </DataTemplate>
+                </GridView.ItemTemplate>
+            </GridView>
         </StackPanel>
     </Grid>
 </Page>

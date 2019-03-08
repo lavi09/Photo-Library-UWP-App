@@ -1,0 +1,33 @@
+﻿<ContentDialog x:ConnectionId='1'
+    x:Class="PhotoLib.CreateAlbum"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:PhotoLib"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Title="Enter Album Name :"
+   
+    PrimaryButtonText="Add"
+    SecondaryButtonText="Cancel"
+                                               
+                                                    >
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="36*"/>
+            <ColumnDefinition Width="53*"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <TextBox x:ConnectionId='2' 
+            x:Name="AlbumName"
+            Width="247"
+            Height="38"
+            Margin="0,10,0,0"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Top"           
+            TextWrapping="Wrap" Grid.ColumnSpan="2" 
+            />
+    </Grid>
+</ContentDialog>
+

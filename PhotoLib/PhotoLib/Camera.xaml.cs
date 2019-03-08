@@ -43,15 +43,12 @@ namespace PhotoLib
             CameraCaptureUI captureUI = new CameraCaptureUI();
             captureUI.PhotoSettings.Format = CameraCaptureUIPhotoFormat.Jpeg;
             captureUI.PhotoSettings.AllowCropping = false;
-
             StorageFile photo = await captureUI.CaptureFileAsync(CameraCaptureUIMode.Photo);
             StorageFile fileCopy = await photo.CopyAsync(Windows.Storage.ApplicationData.Current.LocalFolder);
-
             if (photo == null)
-            {                
+            {
                 return;
             }
-
             if (TemporaryFile != null)
             {
                 await TemporaryFile.DeleteAsync();
@@ -60,12 +57,10 @@ namespace PhotoLib
             var camImage = new Images
             {
                 Temp = photo,
-
             };
             var camImageFile = camImage.Temp;
             camImage.Name = camImageFile.Name;
             camImage.ID = ++camlastImageID;
-            // Update the image        
             BitmapImage bitmapImage = new BitmapImage();
             FileRandomAccessStream stream = (FileRandomAccessStream)await TemporaryFile.OpenAsync(FileAccessMode.Read);
             bitmapImage.SetSource(stream);
@@ -76,35 +71,29 @@ namespace PhotoLib
         private void Back_Click(object sender, RoutedEventArgs e)
         {
             Frame.Navigate(typeof(MainPage));
-
             ElementSoundPlayer.Play(ElementSoundKind.GoBack);
-
         }
 
         private async void VideoButton_Click(object sender, RoutedEventArgs e)
         {
             CameraCaptureUI dialog = new CameraCaptureUI();
             dialog.VideoSettings.Format = CameraCaptureUIVideoFormat.Mp4;
-
             StorageFile file = await dialog.CaptureFileAsync(CameraCaptureUIMode.Video);
             StorageFile fileCopy = await file.CopyAsync(Windows.Storage.ApplicationData.Current.LocalFolder);
             if (file != null)
             {
                 IRandomAccessStream fileStream = await file.OpenAsync(FileAccessMode.Read);
                 CapturedVideo.SetSource(fileStream, "video/mp4");
-
             }
             var camVideo = new Images
             {
                 Temp1 = file,
-
             };
             var camVideoFile = camVideo.Temp1;
             camVideo.Name = camVideoFile.Name;
             camVideo.ID = ++camlastVideoID;
             FileHelper.WriteImagesToFileAsync(camVideo, FILE_NAME);
         }
-
     }
 }
 

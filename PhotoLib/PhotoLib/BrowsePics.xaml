@@ -17,8 +17,6 @@
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
-
-
         <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
             <TextBox x:Name="Image"
             Width="206"
@@ -27,7 +25,6 @@
             PlaceholderText="Browse To Select Pictures"
             HorizontalAlignment="Center"
             VerticalAlignment="Center"/>
-
             <Button x:Name="Browse"
             Width="88"
             Height="38"
@@ -36,7 +33,6 @@
             VerticalAlignment="Center"
             Content="Browse"
             Click="Browse_Click" />
-
         </StackPanel>
     </Grid>
 </ContentDialog>
