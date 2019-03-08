@@ -8,25 +8,35 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
     RequestedTheme="Dark">
-
-    <Grid>
-        <Button x:ConnectionId='2' Name="Back"                    HorizontalAlignment="Left" Height="62" Margin="1185,10,0,0" VerticalAlignment="Top" RenderTransformOrigin="2.734,-1.125" Width="46" Background="Black" >
+    
+    <Page.BottomAppBar>
+        <CommandBar>
+            <AppBarButton x:ConnectionId='2' Icon="Back" Label="Back"                     />
+            <AppBarSeparator/>
+        </CommandBar>
+    </Page.BottomAppBar>
+    
+    <Canvas>
+        <!--<Button Name="Back" Click="Back_Click" HorizontalAlignment="Left" Height="62" Margin="1185,10,0,0" VerticalAlignment="Top" RenderTransformOrigin="2.734,-1.125" Width="46" Background="Black" >
             <FontIcon   Margin="-46,0,0,0" FontFamily="Segoe MDL2 Assets"  VerticalAlignment="Center" HorizontalAlignment="Left" Glyph="&#xE711;" Height="60" Width="127" />
-        </Button>
-        <FlipView x:ConnectionId='3' x:Name="flipView1"                                
-           Margin="354,0,320,0">
+        </Button>-->
+        <FlipView x:ConnectionId='3' x:Name="flipView1"                                >
             <FlipView.ItemTemplate>
                 <DataTemplate                         >
-    
-                    <Image x:ConnectionId='4' Width="600"
+                    
+                    <!--<Image Width="600"
                        Height="1000"
+                       Source="{x:Bind}"
+                       Stretch="UniformToFill" />-->
+                    
+                    <Image x:ConnectionId='4' 
                                         
-                       Stretch="UniformToFill" />
+                       Stretch="Uniform" />
                 </DataTemplate>
             </FlipView.ItemTemplate>
         </FlipView>
                 
 
-    </Grid>
+    </Canvas>
 </Page>
 
