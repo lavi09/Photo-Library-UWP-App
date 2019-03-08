@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <Machine>MININT-N5RPPP2</Machine>
-    <WindowsUser>Lavi</WindowsUser>
+    <Machine>DESKTOP-SVKHD88</Machine>
+    <WindowsUser>Eilis</WindowsUser>
     <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
     <TargetOsVersion>10.0</TargetOsVersion>
     <TargetOsDescription>Windows 10.0</TargetOsDescription>
@@ -10,7 +10,7 @@
     <PackageArchitecture>x64</PackageArchitecture>
     <PackageIdentityName>2b956245-0171-4909-adc7-8d6a31f2a16b</PackageIdentityName>
     <PackageIdentityPublisher>CN=Lavi</PackageIdentityPublisher>
-    <IntermediateOutputPath>C:\Users\Administrator\source\repos\Assignment-1\PhotoLib\PhotoLib\obj\x64\Debug\</IntermediateOutputPath>
+    <IntermediateOutputPath>C:\Users\Eilis\Source\Repos\Assignment-12\PhotoLib\PhotoLib\obj\x64\Debug\</IntermediateOutputPath>
     <RemoteDeploymentType>
     </RemoteDeploymentType>
     <PackageRegistrationPath>
@@ -18,8 +18,8 @@
     <RemoveNonLayoutFiles>true</RemoveNonLayoutFiles>
     <DeployOptionalPackages>false</DeployOptionalPackages>
     <WindowsSdkPath>C:\Program Files %28x86%29\Windows Kits\10\</WindowsSdkPath>
-    <LayoutDir>C:\Users\Administrator\source\repos\Assignment-1\PhotoLib\PhotoLib\bin\x64\Debug\AppX</LayoutDir>
-    <RegisteredManifestChecksum>55E5B720B1D28D1F4A03D35DE04FD2E3718F6CAD36AEB7704D1FAD13577A5A69</RegisteredManifestChecksum>
+    <LayoutDir>C:\Users\Eilis\Source\Repos\Assignment-12\PhotoLib\PhotoLib\bin\x64\Debug\AppX</LayoutDir>
+    <RegisteredManifestChecksum>059AFF718A9DEF03219B73CB9508EC29819AE5484C620991B6380F8463C90899</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>2b956245-0171-4909-adc7-8d6a31f2a16b_1.0.0.0_x64__h9a4chv32z4ma</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>2b956245-0171-4909-adc7-8d6a31f2a16b_h9a4chv32z4ma!App</RegisteredUserModeAppID>
     <RegisteredPackageID>2b956245-0171-4909-adc7-8d6a31f2a16b</RegisteredPackageID>
@@ -27,212 +27,212 @@
     <RegisteredVersion>1.0.0.0</RegisteredVersion>
   </PropertyGroup>
   <ItemGroup>
-    <AppXManifest Include="C:\Users\Administrator\source\repos\Assignment-1\PhotoLib\PhotoLib\bin\x64\Debug\Core\AppxManifest.xml">
+    <AppXManifest Include="C:\Users\Eilis\Source\Repos\Assignment-12\PhotoLib\PhotoLib\bin\x64\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2019-03-06T05:03:58.248</Modified>
+      <Modified>2019-03-07T05:20:10.454</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
-    <AppxPackagedFile Include="C:\Users\Administrator\source\repos\Assignment-1\PhotoLib\PhotoLib\bin\x64\Debug\PhotoLib.exe">
+    <AppxPackagedFile Include="C:\Users\Eilis\Source\Repos\Assignment-12\PhotoLib\PhotoLib\bin\x64\Debug\PhotoLib.exe">
       <PackagePath>entrypoint\PhotoLib.exe</PackagePath>
-      <Modified>2019-03-06T05:03:56.760</Modified>
+      <Modified>2019-03-07T05:20:06.590</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-x64.microsoft.netcore.universalwindowsplatform\6.2.3\runtimes\win10-x64\lib\uap10.0.15138\System.Runtime.dll">
       <PackagePath>System.Runtime.dll</PackagePath>
       <Modified>2018-11-29T18:24:50.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Administrator\source\repos\Assignment-1\PhotoLib\PhotoLib\Assets\SmallTile.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\Eilis\Source\Repos\Assignment-12\PhotoLib\PhotoLib\Assets\SmallTile.scale-100.png">
       <PackagePath>Assets\SmallTile.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2019-03-04T22:24:05.273</Modified>
+      <Modified>2019-03-07T02:55:31.288</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Administrator\source\repos\Assignment-1\PhotoLib\PhotoLib\Assets\SmallTile.scale-125.png">
+    <AppxPackagedFile Include="C:\Users\Eilis\Source\Repos\Assignment-12\PhotoLib\PhotoLib\Assets\SmallTile.scale-125.png">
       <PackagePath>Assets\SmallTile.scale-125.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2019-03-04T22:24:05.331</Modified>
+      <Modified>2019-03-07T02:55:31.291</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Administrator\source\repos\Assignment-1\PhotoLib\PhotoLib\Assets\SmallTile.scale-150.png">
+    <AppxPackagedFile Include="C:\Users\Eilis\Source\Repos\Assignment-12\PhotoLib\PhotoLib\Assets\SmallTile.scale-150.png">
       <PackagePath>Assets\SmallTile.scale-150.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2019-03-04T22:24:05.400</Modified>
+      <Modified>2019-03-07T02:55:31.293</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Administrator\source\repos\Assignment-1\PhotoLib\PhotoLib\Assets\SmallTile.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Eilis\Source\Repos\Assignment-12\PhotoLib\PhotoLib\Assets\SmallTile.scale-200.png">
       <PackagePath>Assets\SmallTile.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2019-03-04T22:24:05.454</Modified>
+      <Modified>2019-03-07T02:55:31.295</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Administrator\source\repos\Assignment-1\PhotoLib\PhotoLib\Assets\SmallTile.scale-400.png">
+    <AppxPackagedFile Include="C:\Users\Eilis\Source\Repos\Assignment-12\PhotoLib\PhotoLib\Assets\SmallTile.scale-400.png">
       <PackagePath>Assets\SmallTile.scale-400.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2019-03-04T22:24:05.541</Modified>
+      <Modified>2019-03-07T02:55:31.298</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Administrator\source\repos\Assignment-1\PhotoLib\PhotoLib\Assets\SplashScreen.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\Eilis\Source\Repos\Assignment-12\PhotoLib\PhotoLib\Assets\SplashScreen.scale-100.png">
       <PackagePath>Assets\SplashScreen.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2019-03-04T22:27:34.139</Modified>
+      <Modified>2019-03-07T02:55:31.300</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Administrator\source\repos\Assignment-1\PhotoLib\PhotoLib\Assets\SplashScreen.scale-125.png">
+    <AppxPackagedFile Include="C:\Users\Eilis\Source\Repos\Assignment-12\PhotoLib\PhotoLib\Assets\SplashScreen.scale-125.png">
       <PackagePath>Assets\SplashScreen.scale-125.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2019-03-04T22:27:34.283</Modified>
+      <Modified>2019-03-07T02:55:31.303</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Administrator\source\repos\Assignment-1\PhotoLib\PhotoLib\Assets\SplashScreen.scale-150.png">
+    <AppxPackagedFile Include="C:\Users\Eilis\Source\Repos\Assignment-12\PhotoLib\PhotoLib\Assets\SplashScreen.scale-150.png">
       <PackagePath>Assets\SplashScreen.scale-150.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2019-03-04T22:27:34.468</Modified>
+      <Modified>2019-03-07T02:55:31.305</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Administrator\source\repos\Assignment-1\PhotoLib\PhotoLib\Assets\SplashScreen.scale-400.png">
+    <AppxPackagedFile Include="C:\Users\Eilis\Source\Repos\Assignment-12\PhotoLib\PhotoLib\Assets\SplashScreen.scale-400.png">
       <PackagePath>Assets\SplashScreen.scale-400.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2019-03-04T22:27:35.044</Modified>
+      <Modified>2019-03-07T02:55:31.313</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Administrator\source\repos\Assignment-1\PhotoLib\PhotoLib\Assets\Square44x44Logo.altform-unplated_targetsize-16.png">
+    <AppxPackagedFile Include="C:\Users\Eilis\Source\Repos\Assignment-12\PhotoLib\PhotoLib\Assets\Square44x44Logo.altform-unplated_targetsize-16.png">
       <PackagePath>Assets\Square44x44Logo.altform-unplated_targetsize-16.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2019-03-04T22:27:11.400</Modified>
+      <Modified>2019-03-07T02:55:31.317</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Administrator\source\repos\Assignment-1\PhotoLib\PhotoLib\Assets\Square44x44Logo.altform-unplated_targetsize-256.png">
+    <AppxPackagedFile Include="C:\Users\Eilis\Source\Repos\Assignment-12\PhotoLib\PhotoLib\Assets\Square44x44Logo.altform-unplated_targetsize-256.png">
       <PackagePath>Assets\Square44x44Logo.altform-unplated_targetsize-256.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2019-03-04T22:27:11.505</Modified>
+      <Modified>2019-03-07T02:55:31.320</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Administrator\source\repos\Assignment-1\PhotoLib\PhotoLib\Assets\Square44x44Logo.altform-unplated_targetsize-32.png">
+    <AppxPackagedFile Include="C:\Users\Eilis\Source\Repos\Assignment-12\PhotoLib\PhotoLib\Assets\Square44x44Logo.altform-unplated_targetsize-32.png">
       <PackagePath>Assets\Square44x44Logo.altform-unplated_targetsize-32.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2019-03-04T22:27:11.434</Modified>
+      <Modified>2019-03-07T02:55:31.322</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Administrator\source\repos\Assignment-1\PhotoLib\PhotoLib\Assets\Square44x44Logo.altform-unplated_targetsize-48.png">
+    <AppxPackagedFile Include="C:\Users\Eilis\Source\Repos\Assignment-12\PhotoLib\PhotoLib\Assets\Square44x44Logo.altform-unplated_targetsize-48.png">
       <PackagePath>Assets\Square44x44Logo.altform-unplated_targetsize-48.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2019-03-04T22:27:11.455</Modified>
+      <Modified>2019-03-07T02:55:31.325</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Administrator\source\repos\Assignment-1\PhotoLib\PhotoLib\Assets\Square44x44Logo.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\Eilis\Source\Repos\Assignment-12\PhotoLib\PhotoLib\Assets\Square44x44Logo.scale-100.png">
       <PackagePath>Assets\Square44x44Logo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2019-03-04T22:27:10.750</Modified>
+      <Modified>2019-03-07T02:55:31.327</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Administrator\source\repos\Assignment-1\PhotoLib\PhotoLib\Assets\Square44x44Logo.scale-125.png">
+    <AppxPackagedFile Include="C:\Users\Eilis\Source\Repos\Assignment-12\PhotoLib\PhotoLib\Assets\Square44x44Logo.scale-125.png">
       <PackagePath>Assets\Square44x44Logo.scale-125.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2019-03-04T22:27:10.834</Modified>
+      <Modified>2019-03-07T02:55:31.329</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Administrator\source\repos\Assignment-1\PhotoLib\PhotoLib\Assets\Square44x44Logo.scale-150.png">
+    <AppxPackagedFile Include="C:\Users\Eilis\Source\Repos\Assignment-12\PhotoLib\PhotoLib\Assets\Square44x44Logo.scale-150.png">
       <PackagePath>Assets\Square44x44Logo.scale-150.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2019-03-04T22:27:10.927</Modified>
+      <Modified>2019-03-07T02:55:31.331</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Administrator\source\repos\Assignment-1\PhotoLib\PhotoLib\Assets\Square44x44Logo.scale-400.png">
+    <AppxPackagedFile Include="C:\Users\Eilis\Source\Repos\Assignment-12\PhotoLib\PhotoLib\Assets\Square44x44Logo.scale-400.png">
       <PackagePath>Assets\Square44x44Logo.scale-400.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2019-03-04T22:27:11.121</Modified>
+      <Modified>2019-03-07T02:55:31.336</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Administrator\source\repos\Assignment-1\PhotoLib\PhotoLib\Assets\Square44x44Logo.targetsize-16.png">
+    <AppxPackagedFile Include="C:\Users\Eilis\Source\Repos\Assignment-12\PhotoLib\PhotoLib\Assets\Square44x44Logo.targetsize-16.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-16.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2019-03-04T22:27:11.186</Modified>
+      <Modified>2019-03-07T02:55:31.338</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Administrator\source\repos\Assignment-1\PhotoLib\PhotoLib\Assets\Square44x44Logo.targetsize-24.png">
+    <AppxPackagedFile Include="C:\Users\Eilis\Source\Repos\Assignment-12\PhotoLib\PhotoLib\Assets\Square44x44Logo.targetsize-24.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-24.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2019-03-04T22:27:11.249</Modified>
+      <Modified>2019-03-07T02:55:31.340</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Administrator\source\repos\Assignment-1\PhotoLib\PhotoLib\Assets\Square44x44Logo.targetsize-256.png">
+    <AppxPackagedFile Include="C:\Users\Eilis\Source\Repos\Assignment-12\PhotoLib\PhotoLib\Assets\Square44x44Logo.targetsize-256.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-256.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2019-03-04T22:27:11.382</Modified>
+      <Modified>2019-03-07T02:55:31.346</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Administrator\source\repos\Assignment-1\PhotoLib\PhotoLib\Assets\Square44x44Logo.targetsize-32.png">
+    <AppxPackagedFile Include="C:\Users\Eilis\Source\Repos\Assignment-12\PhotoLib\PhotoLib\Assets\Square44x44Logo.targetsize-32.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-32.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2019-03-04T22:27:11.309</Modified>
+      <Modified>2019-03-07T02:55:31.348</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Administrator\source\repos\Assignment-1\PhotoLib\PhotoLib\Assets\Square44x44Logo.targetsize-48.png">
+    <AppxPackagedFile Include="C:\Users\Eilis\Source\Repos\Assignment-12\PhotoLib\PhotoLib\Assets\Square44x44Logo.targetsize-48.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-48.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2019-03-04T22:27:11.334</Modified>
+      <Modified>2019-03-07T02:55:31.350</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Administrator\source\repos\Assignment-1\PhotoLib\PhotoLib\Assets\LockScreenLogo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Eilis\Source\Repos\Assignment-12\PhotoLib\PhotoLib\Assets\LockScreenLogo.scale-200.png">
       <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
-      <Modified>2019-01-04T01:53:12.565</Modified>
+      <Modified>2019-03-07T02:55:31.286</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Administrator\source\repos\Assignment-1\PhotoLib\PhotoLib\Assets\SplashScreen.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Eilis\Source\Repos\Assignment-12\PhotoLib\PhotoLib\Assets\SplashScreen.scale-200.png">
       <PackagePath>Assets\SplashScreen.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2019-03-04T22:27:34.645</Modified>
+      <Modified>2019-03-07T02:55:31.308</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Administrator\source\repos\Assignment-1\PhotoLib\PhotoLib\Assets\Square150x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Eilis\Source\Repos\Assignment-12\PhotoLib\PhotoLib\Assets\Square150x150Logo.scale-200.png">
       <PackagePath>Assets\Square150x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2019-01-04T01:53:12.565</Modified>
+      <Modified>2019-03-07T02:55:31.315</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Administrator\source\repos\Assignment-1\PhotoLib\PhotoLib\Assets\Square44x44Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Eilis\Source\Repos\Assignment-12\PhotoLib\PhotoLib\Assets\Square44x44Logo.scale-200.png">
       <PackagePath>Assets\Square44x44Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2019-03-04T22:27:11.009</Modified>
+      <Modified>2019-03-07T02:55:31.334</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Administrator\source\repos\Assignment-1\PhotoLib\PhotoLib\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
+    <AppxPackagedFile Include="C:\Users\Eilis\Source\Repos\Assignment-12\PhotoLib\PhotoLib\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-24_altform-unplated.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2019-03-04T22:27:11.417</Modified>
+      <Modified>2019-03-07T02:55:31.343</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Administrator\source\repos\Assignment-1\PhotoLib\PhotoLib\Assets\StoreLogo.png">
+    <AppxPackagedFile Include="C:\Users\Eilis\Source\Repos\Assignment-12\PhotoLib\PhotoLib\Assets\StoreLogo.png">
       <PackagePath>Assets\StoreLogo.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2019-01-04T01:53:12.565</Modified>
+      <Modified>2019-03-07T02:55:31.353</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Administrator\source\repos\Assignment-1\PhotoLib\PhotoLib\Assets\Wide310x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Eilis\Source\Repos\Assignment-12\PhotoLib\PhotoLib\Assets\Wide310x150Logo.scale-200.png">
       <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2019-01-04T01:53:12.565</Modified>
+      <Modified>2019-03-07T02:55:31.355</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Administrator\source\repos\Assignment-1\PhotoLib\PhotoLib\Properties\Default.rd.xml">
+    <AppxPackagedFile Include="C:\Users\Eilis\Source\Repos\Assignment-12\PhotoLib\PhotoLib\Properties\Default.rd.xml">
       <PackagePath>Properties\Default.rd.xml</PackagePath>
-      <Modified>2019-02-05T19:49:44.756</Modified>
+      <Modified>2019-03-07T02:55:31.404</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Administrator\source\repos\Assignment-1\PhotoLib\PhotoLib\bin\x64\Debug\PhotoLib.xr.xml">
+    <AppxPackagedFile Include="C:\Users\Eilis\Source\Repos\Assignment-12\PhotoLib\PhotoLib\bin\x64\Debug\PhotoLib.xr.xml">
       <PackagePath>PhotoLib.xr.xml</PackagePath>
-      <Modified>2019-03-06T05:03:56.317</Modified>
+      <Modified>2019-03-07T04:32:01.328</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Administrator\source\repos\Assignment-1\PhotoLib\PhotoLib\bin\x64\Debug\App.xbf">
+    <AppxPackagedFile Include="C:\Users\Eilis\Source\Repos\Assignment-12\PhotoLib\PhotoLib\bin\x64\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2019-03-06T05:03:56.371</Modified>
+      <Modified>2019-03-07T05:20:05.657</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Administrator\source\repos\Assignment-1\PhotoLib\PhotoLib\bin\x64\Debug\Album.xbf">
+    <AppxPackagedFile Include="C:\Users\Eilis\Source\Repos\Assignment-12\PhotoLib\PhotoLib\bin\x64\Debug\Album.xbf">
       <PackagePath>Album.xbf</PackagePath>
-      <Modified>2019-03-06T05:03:56.372</Modified>
+      <Modified>2019-03-07T05:20:05.658</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Administrator\source\repos\Assignment-1\PhotoLib\PhotoLib\bin\x64\Debug\BrowsePics.xbf">
+    <AppxPackagedFile Include="C:\Users\Eilis\Source\Repos\Assignment-12\PhotoLib\PhotoLib\bin\x64\Debug\BrowsePics.xbf">
       <PackagePath>BrowsePics.xbf</PackagePath>
-      <Modified>2019-03-06T05:03:56.373</Modified>
+      <Modified>2019-03-07T05:20:05.659</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Administrator\source\repos\Assignment-1\PhotoLib\PhotoLib\bin\x64\Debug\Camera.xbf">
+    <AppxPackagedFile Include="C:\Users\Eilis\Source\Repos\Assignment-12\PhotoLib\PhotoLib\bin\x64\Debug\Camera.xbf">
       <PackagePath>Camera.xbf</PackagePath>
-      <Modified>2019-03-06T05:03:56.373</Modified>
+      <Modified>2019-03-07T05:20:05.661</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Administrator\source\repos\Assignment-1\PhotoLib\PhotoLib\bin\x64\Debug\CreateAlbum.xbf">
+    <AppxPackagedFile Include="C:\Users\Eilis\Source\Repos\Assignment-12\PhotoLib\PhotoLib\bin\x64\Debug\CreateAlbum.xbf">
       <PackagePath>CreateAlbum.xbf</PackagePath>
-      <Modified>2019-03-06T05:03:56.374</Modified>
+      <Modified>2019-03-07T05:20:05.663</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Administrator\source\repos\Assignment-1\PhotoLib\PhotoLib\bin\x64\Debug\FullsizeImage.xbf">
+    <AppxPackagedFile Include="C:\Users\Eilis\Source\Repos\Assignment-12\PhotoLib\PhotoLib\bin\x64\Debug\FullsizeImage.xbf">
       <PackagePath>FullsizeImage.xbf</PackagePath>
-      <Modified>2019-03-06T05:03:56.374</Modified>
+      <Modified>2019-03-07T05:20:05.665</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Administrator\source\repos\Assignment-1\PhotoLib\PhotoLib\bin\x64\Debug\MainPage.xbf">
+    <AppxPackagedFile Include="C:\Users\Eilis\Source\Repos\Assignment-12\PhotoLib\PhotoLib\bin\x64\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2019-03-06T05:03:56.374</Modified>
+      <Modified>2019-03-07T05:20:05.656</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.16299.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
       <Modified>2017-11-11T02:15:50.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Administrator\source\repos\Assignment-1\PhotoLib\PhotoLib\bin\x64\Debug\resources.pri">
+    <AppxPackagedFile Include="C:\Users\Eilis\Source\Repos\Assignment-12\PhotoLib\PhotoLib\bin\x64\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2019-03-05T01:31:08.140</Modified>
+      <Modified>2019-03-07T03:06:38.587</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Administrator\source\repos\Assignment-1\PhotoLib\PhotoLib\bin\x64\Debug\Core\PhotoLib.exe">
+    <AppxPackagedFile Include="C:\Users\Eilis\Source\Repos\Assignment-12\PhotoLib\PhotoLib\bin\x64\Debug\Core\PhotoLib.exe">
       <PackagePath>PhotoLib.exe</PackagePath>
-      <Modified>2019-03-06T05:03:58.228</Modified>
+      <Modified>2019-03-07T05:20:10.387</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>
