@@ -6,77 +6,48 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-    RequestedTheme="Dark"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-    
-    
-
-    <Page.BottomAppBar>
-        <CommandBar RequestedTheme="Dark" >
-            <AppBarButton x:ConnectionId='1' Icon="Back" Label="Back"                             />
-            <AppBarSeparator/>
-        </CommandBar>
-    </Page.BottomAppBar>
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        
-    <Grid.ColumnDefinitions>
-        <ColumnDefinition Width="Auto"/>
-        <ColumnDefinition Width="*"/>
-    </Grid.ColumnDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="260"/>
+            <ColumnDefinition Width="188"/>
+            <ColumnDefinition Width="385"/>
+            <ColumnDefinition Width="1379"/>
 
-    <Grid.RowDefinitions>
-        <RowDefinition Height="Auto"/>
-        <RowDefinition Height="*"/>
-    </Grid.RowDefinitions>
+        </Grid.ColumnDefinitions>
+        <StackPanel Grid.Column="0" Grid.ColumnSpan="2" HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Stretch">
 
-    <SplitView x:ConnectionId='2'  x:Name="Splitter" OpenPaneLength="220" IsPaneOpen="True" Grid.Column="0" DisplayMode="Inline" Grid.Row="0" Height="700" CompactPaneLength="50">
-        <SplitView.Pane>
+            <Button x:ConnectionId='5' Name="PhotoButton" Background="Gold"                       >
+                <Viewbox MaxHeight="40" MaxWidth="40">
+                    <SymbolIcon  Symbol="Camera"/>
+                </Viewbox>
+            </Button>
+        </StackPanel>
+        <StackPanel Grid.Column="1" Margin="25,0,0,0" Grid.ColumnSpan="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
 
-            <StackPanel>
-                <TextBlock x:ConnectionId='5' x:Name="MediaCenter" Text="Media Capture" Style="{StaticResource SubheaderTextBlockStyle}" TextWrapping="Wrap" Margin="10,10,0,20"/>
-                 <GridView>
-                     <Button x:ConnectionId='8' Name="PhotoButton" Background="Gold"                        Height="56" Width="198" VerticalAlignment="Center" HorizontalAlignment="Right" BorderBrush="{x:Null}" Margin="10,0,0,0">
-                            <StackPanel Orientation="Horizontal">
-                                <Viewbox MaxHeight="40" MaxWidth="40">
-                                    <SymbolIcon  Symbol="Camera"/>
-                                </Viewbox>
-                                <TextBlock  Text="Camera"  FontSize="20" TextWrapping="Wrap" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="22,0,0,0" Width="93" />
-                            </StackPanel>
-                        </Button>
-                 </GridView>
+            <Button x:ConnectionId='4' Name="VideoButton"                          >
+                <Viewbox MaxHeight="40" MaxWidth="40">
+                    <SymbolIcon Symbol="Video"/>
+                </Viewbox>
+            </Button>
+        </StackPanel>
+        <StackPanel Grid.Column="2" HorizontalAlignment="Left" Width="254" Margin="232,0,0,10" Grid.ColumnSpan="2">
+            <Button x:ConnectionId='3' x:Name="back" Content="BACK"                    RenderTransformOrigin="4.768,-0.078" HorizontalAlignment="Left" Height="56" VerticalAlignment="Top" Width="62" Margin="41,0,0,0" UseLayoutRounding="False" d:LayoutRounding="Auto" >
 
-                    <GridView>
-                        <Button x:ConnectionId='7' Name="VideoButton"                           Height="56" Width="198" HorizontalAlignment="Center" BorderBrush="{x:Null}" VerticalAlignment="Center" Margin="10,0,0,0">
-                            <StackPanel Orientation="Horizontal">
-                            <Viewbox MaxHeight="40" MaxWidth="40">
-                                <SymbolIcon Symbol="Video"/>
-                            </Viewbox>
-                                <TextBlock Text="Video" FontSize="20" TextWrapping="Wrap" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="22,0,0,0" Width="93" />
-                            </StackPanel>
-                        </Button>
-                    </GridView>
-
-
-                    <GridView>
-                        <Button x:ConnectionId='6' x:Name="back" Content="BACK"                    RenderTransformOrigin="4.768,-0.078" HorizontalAlignment="Center" Height="54" FontWeight="SemiBold" VerticalAlignment="Top" Width="198" UseLayoutRounding="False" d:LayoutRounding="Auto" BorderBrush="{x:Null}" Margin="10,0,0,0" >
-                        </Button>
-                    </GridView>
-                </StackPanel>
-            </SplitView.Pane>
-        </SplitView>
-    
-    <Image x:ConnectionId='3' 
+            </Button>
+        </StackPanel>
+        <Image x:ConnectionId='1' 
             x:Name="image"
             Width="456"
             Height="511"
-            HorizontalAlignment="Right"
+            HorizontalAlignment="Left"
             VerticalAlignment="Center"
             Source="ms-appx:///Assets/face_1.png" Grid.ColumnSpan="3" Margin="224,0,0,0" />
 
 
         <!--<Grid x:Name="Output" HorizontalAlignment="Center" VerticalAlignment="Center" Height="1000" Width="392">-->
-        <MediaElement x:ConnectionId='4' x:Name="CapturedVideo" HorizontalAlignment="Center" AutoPlay="True" MaxWidth="392" Width="392" Grid.ColumnSpan="2"/>
+        <MediaElement x:ConnectionId='2' x:Name="CapturedVideo" HorizontalAlignment="Left" AutoPlay="True" MaxWidth="392" Width="392" Grid.ColumnSpan="2"/>
         <!--</Grid>-->
     </Grid>
 </Page>

@@ -105,10 +105,6 @@ namespace PhotoLib
             FileHelper.WriteImagesToFileAsync(camVideo, FILE_NAME);
         }
 
-        private void AppBarButton_Click(object sender, RoutedEventArgs e)
-        {
-            Frame.Navigate(typeof(MainPage));
-        }
     }
 }
 
