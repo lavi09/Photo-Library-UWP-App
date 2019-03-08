@@ -42,18 +42,9 @@ namespace PhotoLib
             Images albumImageInContext = (Images)e.ClickedItem;
             StorageFolder localFolder = ApplicationData.Current.LocalFolder;
             StorageFile file = await localFolder.GetFileAsync(albumImageInContext.imageFileName);
-            this.Frame.Navigate(typeof(MainPage),file);
-            
-                     
-        }
-       
-
-        private void MenuFlyoutItem_Click(object sender, RoutedEventArgs e)
-        {
-                   
-
-        }
-
+            this.Frame.Navigate(typeof(MainPage),file);                  
+        }       
+        
         private void Back_Click(object sender, RoutedEventArgs e)
         {
             this.Frame.Navigate(typeof(MainPage));

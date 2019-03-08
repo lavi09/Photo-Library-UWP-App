@@ -17,7 +17,6 @@
            Margin="205,0,203,0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
             <FlipView.ItemTemplate>
                 <DataTemplate x:DataType="BitmapImage">
-
                     <Image Width="600"
                        Height="1000"
                        Source="{x:Bind}"
@@ -25,7 +24,5 @@
                 </DataTemplate>
             </FlipView.ItemTemplate>
         </FlipView>
-
-
     </Grid>
 </Page>

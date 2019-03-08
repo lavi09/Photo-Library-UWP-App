@@ -48,8 +48,8 @@
                         <ListView x:ConnectionId='5' x:Name ="AlbumNames" Visibility ="Visible"                                    Height="300" ScrollViewer.VerticalScrollMode="Enabled" ScrollViewer.VerticalScrollBarVisibility ="Auto" >
                             <ListView.ItemTemplate>
                                 <DataTemplate                          >
-                                    <TextBlock x:ConnectionId='6'                           FontSize="14" FontWeight="Bold" />
-                                    <!--<Button  FontSize="14" FontWeight="Bold" Width="110" Height="34" Name="albumname" Click="Albumname_Click"  Content="{x:Bind AlbumName}" />-->
+                                    <!--<TextBlock Text="{x:Bind AlbumName}" FontSize="14" FontWeight="Bold" />-->
+                                    <Button x:ConnectionId='6'  FontSize="14" FontWeight="Bold" Width="110" Height="34" Name="albumname"                                                       />
                                 </DataTemplate>
                             </ListView.ItemTemplate>
                         </ListView>

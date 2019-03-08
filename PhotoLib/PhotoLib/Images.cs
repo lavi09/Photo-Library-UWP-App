@@ -15,27 +15,18 @@ namespace PhotoLib
 {
     class Images
     {
-        public int ID { get; set; }
-        public uint Height { get; set; }
-        public uint Width { get; set; }
-        public string Title { get; set; }
+        public int ID { get; set; }    
         public string Name { get; set; }
         public BitmapImage Collection { get; set; }
         public StorageFile SourceImageFile { get; internal set; }
-        private static int lastImageID = 0;
-        
+        private static int lastImageID = 0;        
         private static string FILE_NAME = "ImageStorage.txt";
         public string imageFileName;
         public StorageFile Temp = null;
         public string videoFileName;
-
         public ObservableCollection<Images> ImageList { get; private set; }
         public ObservableCollection<Images> VideoImageList { get; private set; }
-       
-        public WriteableBitmap Collection1 { get; private set; }
-
         public string AlbumName { get; set; }
-        public string AlName;
         public BitmapImage AlbumCollection { get;  set; }
         public ObservableCollection<Images> Albums { get; private set; }
         public ObservableCollection<Images> AlbumImageList { get; private set; }
@@ -64,23 +55,17 @@ namespace PhotoLib
                 {
                     await imageFile.CopyAsync(localFolder);
                 }
-
-                //image.Title = imageProperties.Title;  
+ 
                 image.Name = imageFile.Name;
-
                 image.ID = ++lastImageID;
                 FileHelper.WriteImagesToFileAsync(image, FILE_NAME);
-
-
             }
             catch (ArgumentException ex)
             {
                 var messageDialog = new MessageDialog(ex.Message);
-                // Show the message dialog
                 await messageDialog.ShowAsync();
                 return;
             }
-
         }
 
         public async void GetAllImagesAsync()
@@ -91,21 +76,15 @@ namespace PhotoLib
             var allFiles = await folder.GetFilesAsync();
             foreach (var file in allFiles)
             {
-
                 if (file.FileType.Equals(".jpg") || file.FileType.Equals(".png") || file.FileType.Equals(".jpeg"))
                 {
-
                     ImageProperties imageProperties = await file.Properties.GetImagePropertiesAsync();
-
                     StorageItemThumbnail storageItemThumbnail = await file.GetThumbnailAsync(ThumbnailMode.PicturesView, 200, ThumbnailOptions.UseCurrentScale);
                     var Picture = new BitmapImage();
                     Picture.SetSource(storageItemThumbnail);
-
                     Images p = new Images
                     {
                         Name = file.Name,
-                        Height = imageProperties.Height,
-                        Width = imageProperties.Width,
                         imageFileName = file.Name,
                         Collection = Picture
                     };
@@ -114,17 +93,13 @@ namespace PhotoLib
                     ImageList.Add(p);
                 }
                 if (file.FileType.Equals(".mp4"))
-                {
-
-                    //// ImageProperties imageProperties = await file.Properties.GetImagePropertiesAsync();
+                {                    
                     VideoProperties videoProperties = await file.Properties.GetVideoPropertiesAsync();
                     StorageItemThumbnail storageItemThumbnail = await file.GetThumbnailAsync(ThumbnailMode.VideosView, 200, ThumbnailOptions.UseCurrentScale);
                     var video = new BitmapImage();
                     video.SetSource(storageItemThumbnail);
                     Images v = new Images
-                    {
-                        Height = videoProperties.Height,
-                        Width = videoProperties.Width,
+                    {                      
                         Name = file.Name,
                         videoFileName = file.Name,
                         Collection = video
@@ -133,25 +108,9 @@ namespace PhotoLib
                     v.ID = videoid;
                     VideoImageList.Add(v);
                 }
-
-
             }
         }
-        //public async void GetAllAlbumImagesAsync(Images albumImageInContext)
-        //{
-        //    StorageFolder localFolder = ApplicationData.Current.LocalFolder;
-        //    StorageFile file = await localFolder.GetFileAsync(albumImageInContext.imageFileName);
-        //    StorageItemThumbnail storageItemThumbnail = await file.GetThumbnailAsync(ThumbnailMode.PicturesView, 200, ThumbnailOptions.UseCurrentScale);
-        //    var Picture = new BitmapImage();
-        //    Picture.SetSource(storageItemThumbnail);
 
-        //    Images a = new Images
-        //    {
-        //        AlbumCollection = Picture
-        //    };
-        //    AlbumImageList.Add(a);
-
-        //}
         public void SearchImages(string str, int pageSize = 1, int currentPage = 0)
         {
             str = str.ToLower();
@@ -161,9 +120,8 @@ namespace PhotoLib
             var query1 = (from Images s in VideoImageList
                          where s.Name.ToLower().Contains(str)
                          select s);
-
             ImageList = new ObservableCollection<Images>(query);
-           VideoImageList = new ObservableCollection<Images>(query1);
+            VideoImageList = new ObservableCollection<Images>(query1);
         }
 
         public async void AddAlbum(Images a)
@@ -171,34 +129,24 @@ namespace PhotoLib
             if (await FileHelper.IsDuplicateNewAlbumAsync(a) == false)
             {
                 Albums.Add(a);
-
                 FileHelper.WriteAlbumToFileAsync(a);
             }
             else
             {
                 var messageDialog = new MessageDialog("The album name already exist.");
-                // Show the message dialog
                 await messageDialog.ShowAsync();
                 return;
             }
-
         }
 
         public async void DisplayAllAlbums()
         {
-
             ObservableCollection<Images> tempalbums = new ObservableCollection<Images>(await FileHelper.GetAllAlbumsAsync());
-
             Albums.Clear();
-
             for (int i = 0; i < tempalbums.Count; i++)
             {
                 Albums.Add(tempalbums[i]);
             }
-
         }
-
-
-
     }
 }

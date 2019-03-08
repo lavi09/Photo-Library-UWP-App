@@ -10,12 +10,10 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
     <Grid>
         <ScrollViewer x:Name="myScrollViewer">
-
             <SplitView  x:Name="MySplitView" DisplayMode="CompactOverlay"  CompactPaneLength="70" OpenPaneLength="220" PaneClosing="MySplitView_PaneClosing" >
                 <SplitView.Pane >
                     <StackPanel Background="Transparent">
                         <Button x:Name="HamburgerButton"  FontFamily="Segoe MDL2 Assets" Content="&#xE700;" Width="50" Height="50"  BorderThickness="0" Background="Transparent" Click="HamburgerButton_Click"/>
-
                         <StackPanel Background="Transparent" AllowFocusOnInteraction="False" Padding="10" Margin="10,0,0,0" Height="96">
                             <Button x:Name="DisplayImageList" Width="152" Height="162"  BorderThickness="0" Background="Transparent" Click="DisplayImage_Click" HorizontalAlignment="Left" Margin="-57,0,0,0" VerticalAlignment="Center">
                                 <StackPanel>
@@ -40,22 +38,18 @@
                                             <CompositeTransform Rotation="-0.076"/>
                                         </FontIcon.RenderTransform>
                                     </FontIcon>
-                                    <TextBlock Text="Albums" FontSize="14" Width="90" HorizontalAlignment="Center" VerticalAlignment="Center" Height="52" RenderTransformOrigin="0.507,0.144" Margin="0,0,0,0" />
-                                                                 
+                                    <TextBlock Text="Albums" FontSize="14" Width="90" HorizontalAlignment="Center" VerticalAlignment="Center" Height="52" RenderTransformOrigin="0.507,0.144" Margin="0,0,0,0" />                                                                 
                                 </StackPanel>
                             </Button>
                         </StackPanel>
                         <ListView x:Name ="AlbumNames" Visibility ="Visible"  ItemsSource ="{x:Bind pi.Albums}" Height="300" ScrollViewer.VerticalScrollMode="Enabled" ScrollViewer.VerticalScrollBarVisibility ="Auto" >
                             <ListView.ItemTemplate>
-                                <DataTemplate x:DataType="local:Images">
-                                    <TextBlock Text="{x:Bind AlbumName}" FontSize="14" FontWeight="Bold" />
-                                    <!--<Button  FontSize="14" FontWeight="Bold" Width="110" Height="34" Name="albumname" Click="Albumname_Click"  Content="{x:Bind AlbumName}" />-->
+                                <DataTemplate x:DataType="local:Images">                                    
+                                    <Button  FontSize="14" FontWeight="Bold" Width="110" Height="34" Name="albumname" Click="Albumname_Click"  Content="{x:Bind AlbumName}" />
                                 </DataTemplate>
                             </ListView.ItemTemplate>
                         </ListView>
-
                     </StackPanel>
-
                 </SplitView.Pane>
                 <StackPanel>
                     <StackPanel Orientation="Horizontal" VerticalAlignment="Top" Height="137" >
@@ -63,7 +57,6 @@
                         <AutoSuggestBox x:Name="SearchAutoSuggestBox" PlaceholderText="Search for photos"  FontSize="11" VerticalAlignment="Center" HorizontalAlignment="Center"
                       Width="401" Height="50"  QuerySubmitted="SearchAutoSuggestBox_QuerySubmitted"  Background="White" />
                         <Button x:Name="Search" FontFamily="Segoe MDL2 Assets" Content="&#xE71E;" Width="42" Height="50" Background="Transparent" Click="Search_Click" HorizontalAlignment="Left" VerticalAlignment="Center" RenderTransformOrigin="1.81,0.57" Margin="0,0,0,0"/>
-
                         <Button x:Name="Upload" Width="175" Height="50" BorderThickness="0" Background="Transparent" Click="Upload_Click"  HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Center">
                             <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch" Margin="0,0.5,73,9.5" VerticalAlignment="Stretch">
                                 <FontIcon Margin="10,0,0,0" FontFamily="Segoe MDL2 Assets" FontSize="16"  Glyph="&#xE898;"/>
@@ -77,7 +70,6 @@
                             </StackPanel>
                         </Button>
                     </StackPanel>
-
                     <GridView  x:Name="ImageGridView"  ItemsSource="{x:Bind Path=pi.ImageList}" IsItemClickEnabled="True" ItemClick="ImageGridView_ItemClick"  >
                         <GridView.ItemTemplate >
                             <DataTemplate x:DataType="local:Images">
@@ -88,38 +80,29 @@
                             </DataTemplate>
                         </GridView.ItemTemplate>
                     </GridView>
-
                     <TextBlock Text="Albums "/>                
                     <GridView  x:Name="AlGridView"  ItemsSource="{x:Bind Path=pi.AlbumImageList}" >
                         <GridView.ItemTemplate >
                             <DataTemplate x:DataType="local:Images">
                                 <StackPanel  Margin ="10" x:Name="Display">
                                     <Image x:Name="albumimage" Margin="6" Width="150" Height="150" Source="{x:Bind Path=AlbumCollection}" Stretch="Fill" />
-                                    <TextBlock TextAlignment="Center" FontSize="14" Text="{Binding AlName}" TextWrapping="Wrap" FontWeight="SemiBold"/>
-
-
+                                    <TextBlock TextAlignment="Center" FontSize="14" Text="{Binding Name}" TextWrapping="Wrap" FontWeight="SemiBold"/>
                                 </StackPanel>
-
                             </DataTemplate>
                         </GridView.ItemTemplate>
                     </GridView>
-
                     <TextBlock Text="Videos "/>
                     <MediaElement  x:Name="MyMediaElement" Visibility="collapsed" AutoPlay="True"  AreTransportControlsEnabled="True" Height="96" HorizontalAlignment="Center" VerticalAlignment="Center" Width="584" />
                     <GridView  x:Name="VideoImageGridView"  ItemsSource="{x:Bind Path=pi.VideoImageList}" IsItemClickEnabled="True" ItemClick="VideoImageGridView_ItemClick" SelectionChanged="VideoImageGridView_SelectionChanged">
                         <GridView.ItemTemplate >
                             <DataTemplate x:DataType="local:Images">
                                 <StackPanel  Margin ="10" x:Name="Display">
-
                                     <Image x:Name="videoimage" Margin="6" Width="150" Height="150" Source="{x:Bind Path=Collection}" Stretch="Fill" />
                                     <TextBlock TextAlignment="Center" FontSize="14"  Text="{Binding Name}" TextWrapping="Wrap" FontWeight="SemiBold"/>
-
                                 </StackPanel>
                             </DataTemplate>
                         </GridView.ItemTemplate>
-                    </GridView>
-                    <!--<MediaPlayerElement x:Name="_mediaPlayerElement" Source="x:Bind _mediaPlayerElement"  AreTransportControlsEnabled="True" HorizontalContentAlignment="Center" AutoPlay="True" Height="113" Margin="715,0,150,0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" />-->
-
+                    </GridView>              
                 </StackPanel>
             </SplitView>
         </ScrollViewer>

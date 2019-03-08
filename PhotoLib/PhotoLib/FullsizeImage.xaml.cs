@@ -21,13 +21,9 @@ using Windows.UI.Xaml.Navigation;
 
 namespace PhotoLib
 {
-
     public sealed partial class FullsizeImage : Page
     {
-
-        ObservableCollection<BitmapImage> FullImg = new ObservableCollection<BitmapImage>();
-
-       // public string filename { get; private set; }
+        ObservableCollection<BitmapImage> FullImg = new ObservableCollection<BitmapImage>();     
 
         public FullsizeImage()
         {
@@ -57,8 +53,7 @@ namespace PhotoLib
             var allFiles = await folder.GetFilesAsync();
             foreach (var file in allFiles)
             {
-
-                    if (file.Name != f.Name && file.FileType.Equals(".jpg") || file.FileType.Equals(".png") || file.FileType.Equals(".jpeg"))
+                if (file.Name != f.Name && file.FileType.Equals(".jpg") || file.FileType.Equals(".png") || file.FileType.Equals(".jpeg"))
                 {
                     using (var stream = await file.OpenReadAsync())
                     {
@@ -69,11 +64,6 @@ namespace PhotoLib
                     }
                 }
             }
-        }
-
-        private void FlipView1_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-             
-        }
+        }      
     }
 }

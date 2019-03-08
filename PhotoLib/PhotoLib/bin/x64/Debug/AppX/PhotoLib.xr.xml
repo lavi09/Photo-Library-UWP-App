@@ -120,6 +120,8 @@
       <RootProperty Name="AllowFocusOnInteraction" />
       <RootProperty Name="FontFamily" />
       <RootProperty Name="BorderThickness" />
+      <RootProperty Name="FontSize" />
+      <RootProperty Name="FontWeight" />
       <RootEvent Name="Click" />
     </RootType>
     <RootType FullName="PhotoLib.BrowsePics" />

@@ -16,10 +16,8 @@
                     <DataTemplate x:DataType="local:Images">
                         <StackPanel  Margin ="10" Name="Display">
                             <Image Name="AlbumImage" Margin="6" Width="150" Height="150" Source="{x:Bind Collection}" Stretch="Fill" >
-
                             </Image>
                             <TextBlock TextAlignment="Center" FontSize="14"  Text="{Binding Name}" TextWrapping="Wrap" FontWeight="SemiBold"></TextBlock>
-
                         </StackPanel>
                     </DataTemplate>
                 </GridView.ItemTemplate>
