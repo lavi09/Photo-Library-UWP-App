@@ -68,47 +68,11 @@ namespace PhotoLib
         }
 
         public static async void WriteAlbumToFileAsync(Images album)
-        {
-            var count = 0;
+        {         
 
             StorageFolder AlocalFolder = ApplicationData.Current.LocalFolder;
             StorageFile AFile = await AlocalFolder.CreateFileAsync(album.AlbumName + ".txt", CreationCollisionOption.OpenIfExists);
             AlbumTextFile = album.AlbumName + ".txt";
-            //var AData = $"{album.imageFileName},";
-
-            //if (album.AlbumImageIDs == null)
-            //    count = 0;
-            //else
-            //    count = album.AlbumImageIDs.Count;
-
-            //if (count > 0)
-            //{
-            //    for (int i = 0; i < count; i++)
-            //        AData = AData + $"{album.AlbumImageIDs[i].ToString()},";                
-            //}
-            //AData = AData + Environment.NewLine;
-
-            //var oldplData = await FileIO.ReadTextAsync(AFile);
-
-            //bool rewrite = false;
-
-            //if (oldplData != "")
-            //{
-            //    var oldplDataimages = oldplData.Split(',');
-
-            //    //not including playlistname and newline
-            //    var oldplDatacount = oldplDataimages.Length - 2;
-            //    if (count > oldplDatacount)
-            //    {
-            //        rewrite = true;
-            //    }
-
-            //}
-           
-            //await FileIO.WriteTextAsync(AFile, AData);
-
-
-
             StorageFolder allPLfolder = ApplicationData.Current.LocalFolder;
             StorageFile allPLFile = await allPLfolder.CreateFileAsync(FILE_NAME1, CreationCollisionOption.OpenIfExists);
 
@@ -127,32 +91,14 @@ namespace PhotoLib
             }
            
             if (exist == false)
-            {
-                await FileIO.WriteTextAsync(AFile, AData);
-
+            {           
                 var albumfilename = album.AlbumName + Environment.NewLine;
                 await FileIO.AppendTextAsync(allPLFile, albumfilename);
 
             }
 
-        }
-
-
-        public static async void WriteAlbumImagesToFileAsync(string content)
-        {
-            StorageFolder Folder = ApplicationData.Current.LocalFolder;
-            StorageFile File = await Folder.CreateFileAsync(AlbumTextFile, CreationCollisionOption.OpenIfExists);
-            var textStream = await File.OpenAsync(FileAccessMode.ReadWrite);
-            var textWriter = new DataWriter(textStream);
-            textWriter.WriteString(content);
-            await textWriter.StoreAsync();
-            textStream.Dispose();
-
-
-        }
-
-
-
+        }  
+               
         public static async Task<ICollection<Images>> GetAllAlbumsAsync()
         {
             List<Images> albums = new List<Images>();
@@ -164,29 +110,12 @@ namespace PhotoLib
             foreach (var pline in allplines)
             {
                 if (pline != "")
-                {
-                    StorageFolder PLfolder = ApplicationData.Current.LocalFolder;
-                    StorageFile PLFile = await PLfolder.GetFileAsync(pline);
-
-                    var line = await FileIO.ReadTextAsync(PLFile);
-
-                    var plData = line.Split(',');
+                {                   
                     var album = new Images();
-
-                    
-                    album.AlbumName = plData[0];
-
-                    for (int i = 1; i < plData.Length; i++)
-                    {
-                        if (plData[i] != "\r\n")
-                            album.AlbumImageIDs.Add(Convert.ToInt32(plData[i]));
-                    }
-                    album.AlbumFilePath = pline;
-
+                    album.AlbumName = pline;                   
                     albums.Add(album);
                 }
             }
-
             return albums;
         }
 
@@ -198,12 +127,7 @@ namespace PhotoLib
             StorageFolder PLlocalFolder = ApplicationData.Current.LocalFolder;
             StorageFile PLFile = await PLlocalFolder.CreateFileAsync(album.AlbumName, CreationCollisionOption.OpenIfExists);
 
-            var plData = $"{album.AlbumName},";
-
-            if (album.AlbumImageIDs == null)
-                count = 0;
-            else
-                count = album.AlbumImageIDs.Count;
+            var plData = $"{album.AlbumName},";            
 
             var oldplData = await FileIO.ReadTextAsync(PLFile);
 
@@ -219,8 +143,7 @@ namespace PhotoLib
                     rewrite = true;
                 }
 
-            }
-         
+            }         
 
             StorageFolder allPLfolder = ApplicationData.Current.LocalFolder;
             StorageFile allPLFile = await allPLfolder.CreateFileAsync(FILE_NAME1, CreationCollisionOption.OpenIfExists);
@@ -242,8 +165,6 @@ namespace PhotoLib
             
             if (exist == true)
             {
-
-
                 if (rewrite == false)
                 {
 
@@ -252,19 +173,6 @@ namespace PhotoLib
 
             }
             return isduplicate;
-        }
-
-
-        public static async Task<string> ReadTextFileAsync(string FILE_NAME)
-        {
-            var localfolder = ApplicationData.Current.LocalFolder;
-            var textFile = await localfolder.GetFileAsync(FILE_NAME);
-            var textStream = await textFile.OpenReadAsync();
-            var textReader = new DataReader(textStream);
-
-            var textLength = textStream.Size;
-            await textReader.LoadAsync((uint)textLength);
-            return textReader.ReadString((uint)textLength);
         }
 
 

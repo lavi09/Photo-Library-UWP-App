@@ -9,30 +9,21 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
-        <StackPanel>
-            <Button x:ConnectionId='6' Name="Back" Content="Back"                      HorizontalAlignment="Left" Height="92" Margin="10,0,0,0" VerticalAlignment="Center" /> 
-        </StackPanel>
-        <StackPanel>
-            <GridView x:ConnectionId='2'  Name="AlbumImagesGridview"                                      IsItemClickEnabled="True"                                          >
+        <TextBlock  Text="Tap on Picture to add in Album " FontFamily="Microsoft Sans Serif" FontSize="16" FontWeight="Normal" FontStyle="Italic" FocusVisualPrimaryBrush="#FFC6D4D8" HorizontalAlignment="Left" Margin="0,70,0,0" Width="491" />
+        <StackPanel Orientation="Vertical" Margin="0,160,0,0">
+            <GridView x:ConnectionId='2'  Name="AlbumImagesGridview"                                      IsItemClickEnabled="True"                                           Height="791">
+                <GridView.ItemTemplate >
+                    <DataTemplate                          >
+                        <StackPanel x:ConnectionId='3'  Margin ="10" Name="Display">
+                            <Image x:ConnectionId='4' Name="AlbumImage" Margin="6" Width="150" Height="150"                              Stretch="Fill" >
 
-            <GridView.ItemTemplate >
-                <DataTemplate                          >
-                    <StackPanel x:ConnectionId='3'  Margin ="10" Name="Display">
-                        <Image x:ConnectionId='4' Name="AlbumImage" Margin="6" Width="150" Height="150"                              Stretch="Fill" IsTapEnabled="True"                            >
-                            <FlyoutBase.AttachedFlyout>
-                                <MenuFlyout>
-                                    <MenuFlyoutItem x:ConnectionId='5' Text="Add" Icon="Add"                             >
-                                    </MenuFlyoutItem>
-                                </MenuFlyout>
-                            </FlyoutBase.AttachedFlyout>
+                            </Image>
+                            <TextBlock TextAlignment="Center" FontSize="14"  Text="{Binding Name}" TextWrapping="Wrap" FontWeight="SemiBold"></TextBlock>
 
-                        </Image>
-                        <TextBlock TextAlignment="Center" FontSize="14"  Text="{Binding Name}" TextWrapping="Wrap" FontWeight="SemiBold"></TextBlock>
-
-                    </StackPanel>
-                </DataTemplate>
-            </GridView.ItemTemplate>
-        </GridView>
+                        </StackPanel>
+                    </DataTemplate>
+                </GridView.ItemTemplate>
+            </GridView>
         </StackPanel>
     </Grid>
 </Page>

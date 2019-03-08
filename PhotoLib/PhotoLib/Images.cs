@@ -31,23 +31,22 @@ namespace PhotoLib
 
         public ObservableCollection<Images> ImageList { get; private set; }
         public ObservableCollection<Images> VideoImageList { get; private set; }
-        public string TempName { get; internal set; }
-        public StorageFile Temp1 { get; internal set; }
+       
         public WriteableBitmap Collection1 { get; private set; }
 
         public string AlbumName { get; set; }
-        public List<int> AlbumImageIDs { get; set; }
-        public string AlbumFilePath { get; set; }
+        public string AlName;
+        public BitmapImage AlbumCollection { get;  set; }
         public ObservableCollection<Images> Albums { get; private set; }
-
-
+        public ObservableCollection<Images> AlbumImageList { get; private set; }
+        public StorageFile Temp1 { get; internal set; }
 
         public Images()
         {
             ImageList = new ObservableCollection<Images>();
             VideoImageList = new ObservableCollection<Images>();
             Albums = new ObservableCollection<Images>();
-            
+            AlbumImageList = new ObservableCollection<Images>();
         }
 
         public static async void AddImageAsync(Images image)
@@ -60,8 +59,6 @@ namespace PhotoLib
                 try
                 {
                     Windows.Storage.StorageFile existingFile = await localFolder.GetFileAsync(imageFile.Name);
-
-
                 }
                 catch (FileNotFoundException)
                 {
@@ -140,15 +137,33 @@ namespace PhotoLib
 
             }
         }
+        //public async void GetAllAlbumImagesAsync(Images albumImageInContext)
+        //{
+        //    StorageFolder localFolder = ApplicationData.Current.LocalFolder;
+        //    StorageFile file = await localFolder.GetFileAsync(albumImageInContext.imageFileName);
+        //    StorageItemThumbnail storageItemThumbnail = await file.GetThumbnailAsync(ThumbnailMode.PicturesView, 200, ThumbnailOptions.UseCurrentScale);
+        //    var Picture = new BitmapImage();
+        //    Picture.SetSource(storageItemThumbnail);
 
+        //    Images a = new Images
+        //    {
+        //        AlbumCollection = Picture
+        //    };
+        //    AlbumImageList.Add(a);
+
+        //}
         public void SearchImages(string str, int pageSize = 1, int currentPage = 0)
         {
             str = str.ToLower();
             var query = (from Images s in ImageList
                          where s.Name.ToLower().Contains(str)
                          select s);
-            ImageList = new ObservableCollection<Images>(query);
+            var query1 = (from Images s in VideoImageList
+                         where s.Name.ToLower().Contains(str)
+                         select s);
 
+            ImageList = new ObservableCollection<Images>(query);
+           VideoImageList = new ObservableCollection<Images>(query1);
         }
 
         public async void AddAlbum(Images a)

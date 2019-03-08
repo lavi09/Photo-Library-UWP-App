@@ -10,6 +10,7 @@ using Windows.Foundation.Collections;
 using Windows.Media.Core;
 using Windows.Media.Playback;
 using Windows.Storage;
+using Windows.Storage.FileProperties;
 using Windows.Storage.Pickers;
 using Windows.Storage.Streams;
 using Windows.UI.Popups;
@@ -30,16 +31,18 @@ namespace PhotoLib
     public sealed partial class MainPage : Page
     {
         private Images pi;
-        
+
 
         ObservableCollection<BitmapImage> ImgList = new ObservableCollection<BitmapImage>();
-        private object bitmapImage;
+        private string albumtempname;
 
         public MainPage()
         {
             this.InitializeComponent();
             pi = new Images();
             pi.GetAllImagesAsync();
+            //pi.GetAllAlbumImagesAsync(albumImageInContext);
+
             this.DataContext = pi;
         }
 
@@ -61,6 +64,7 @@ namespace PhotoLib
             MySplitView.IsPaneOpen = true;
             Search.Visibility = Visibility.Collapsed;
             SearchAutoSuggestBox.Text = "";
+
         }
 
         private void SearchAutoSuggestBox_QuerySubmitted(AutoSuggestBox sender, AutoSuggestBoxQuerySubmittedEventArgs args)
@@ -70,13 +74,9 @@ namespace PhotoLib
             {
                 pi.SearchImages(SearchAutoSuggestBox.Text);
                 this.ImageGridView.ItemsSource = pi.ImageList;
-            }
-            else
-            {
-                pi.GetAllImagesAsync();
-                this.ImageGridView.ItemsSource = pi.ImageList;
-            }
+                this.VideoImageGridView.ItemsSource = pi.VideoImageList;
 
+            }
             MySplitView.IsPaneOpen = false;
             Search.Visibility = Visibility.Visible;
 
@@ -107,19 +107,21 @@ namespace PhotoLib
             Images imageInContext = (Images)e.ClickedItem;
             StorageFolder localFolder = ApplicationData.Current.LocalFolder;
             StorageFile file = await localFolder.GetFileAsync(imageInContext.imageFileName);
-            this.Frame.Navigate(typeof(FullsizeImage),file);
+            this.Frame.Navigate(typeof(FullsizeImage), file);
 
         }
-        private void ImageGridView_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-             
 
-        }
         private void DisplayAlbumsList_Click(object sender, RoutedEventArgs e)
         {
             pi.DisplayAllAlbums();
             this.DataContext = pi;
             this.AlbumNames.ItemsSource = pi.Albums;
+            MySplitView.IsPaneOpen = true;          
+            if (pi.Albums.Count > 0)
+            {
+
+                AlbumNames.Visibility = Visibility.Visible;
+            }
         }
 
         private async void Create_Click(object sender, RoutedEventArgs e)
@@ -130,7 +132,6 @@ namespace PhotoLib
             if (result == ContentDialogResult.Primary)
             {
                 var plname = dialog1.Content;
-
                 try
                 {
                     if (plname.ToString().Contains(","))
@@ -151,23 +152,17 @@ namespace PhotoLib
                     AlbumName = plname.ToString(),
 
                 });
+                
                 this.Frame.Navigate(typeof(Album));
             }
-            else if (result == ContentDialogResult.Secondary) //cancel was selected
+            else if (result == ContentDialogResult.Secondary) 
             {
                 dialog1.Hide();
             }
-        }
-
-        private void Albumname_Click(object sender, RoutedEventArgs e)
-        {
-
-
-        }
+        }       
 
         private async void VideoImageGridView_ItemClick(object sender, ItemClickEventArgs e)
-        {
-            //_mediaPlayerElement.SetMediaPlayer(mediaPlayer);
+        {          
             MyMediaElement.Visibility = Visibility.Visible;
             Images videoInContext = (Images)e.ClickedItem;
 
@@ -176,18 +171,17 @@ namespace PhotoLib
             if (file != null)
             {
                 IRandomAccessStream fileStream = await file.OpenAsync(FileAccessMode.Read);
-               // _mediaPlayerElement.Source = MediaSource.CreateFromStream(fileStream, file.ContentType);
+
                 MyMediaElement.SetSource(fileStream, file.ContentType);
             }
             MyMediaElement.AutoPlay = true;
-            //mediaPlayer = _mediaPlayerElement.MediaPlayer;
-            //mediaPlayer.Play();
+
 
         }
 
         private async void VideoImageGridView_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-          
+
             var count = e.AddedItems.Count;
             if (count > 0)
             {
@@ -198,15 +192,32 @@ namespace PhotoLib
                 if (file != null)
                 {
                     IRandomAccessStream fileStream = await file.OpenAsync(FileAccessMode.Read);
-                    //_mediaPlayerElement.Source = MediaSource.CreateFromStream(fileStream, file.ContentType);
                     MyMediaElement.SetSource(fileStream, file.ContentType);
                 }
-                //mediaPlayer = _mediaPlayerElement.MediaPlayer;
-                //mediaPlayer.Play();
-                MyMediaElement.AutoPlay = true;
+                 MyMediaElement.AutoPlay = true;
             }
         }
 
-        
+
+        protected async override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            base.OnNavigatedTo(e);
+            StorageFile f = e.Parameter as StorageFile;
+            if (f != null)
+            {
+                StorageItemThumbnail storageItemThumbnail = await f.GetThumbnailAsync(ThumbnailMode.PicturesView, 200, ThumbnailOptions.UseCurrentScale);
+                var Picture = new BitmapImage();
+                Picture.SetSource(storageItemThumbnail);
+               
+                Images a = new Images
+                {
+                    AlbumCollection = Picture,
+                    
+                };
+
+                pi.AlbumImageList.Add(a);
+            }
+        }
     }
+
 }
