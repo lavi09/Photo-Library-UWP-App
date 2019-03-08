@@ -2,6 +2,7 @@
 <Roots >
   <Roots.PropertyPathNames>
     <RootPropertyPathName Name="Name" />
+    <RootPropertyPathName Name="AlName" />
   </Roots.PropertyPathNames>
   <Roots.RootTypes>
     <RootType FullName="Windows.UI.Xaml.Application">

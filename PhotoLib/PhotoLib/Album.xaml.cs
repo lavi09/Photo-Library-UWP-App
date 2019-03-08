@@ -27,24 +27,24 @@ namespace PhotoLib
     /// </summary>
     public sealed partial class Album : Page
     {
-        private Images pi;
+        private Images pi;            
 
         public Album()
         {
             this.InitializeComponent();
-            pi = new Images();
+            pi = new Images();            
             pi.GetAllImagesAsync();
-            this.DataContext = pi;
+            this.DataContext = pi;            
         }
-
+      
         public async void AlbumImagesGridview_ItemClick(object sender, ItemClickEventArgs e)
         {
             Images albumImageInContext = (Images)e.ClickedItem;
             StorageFolder localFolder = ApplicationData.Current.LocalFolder;
             StorageFile file = await localFolder.GetFileAsync(albumImageInContext.imageFileName);
-            this.Frame.Navigate(typeof(MainPage), file);
-        }
-
+            this.Frame.Navigate(typeof(MainPage),file);                  
+        }       
+        
         private void Back_Click(object sender, RoutedEventArgs e)
         {
             this.Frame.Navigate(typeof(MainPage));

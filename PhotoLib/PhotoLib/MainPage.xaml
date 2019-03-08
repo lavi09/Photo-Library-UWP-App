@@ -38,13 +38,13 @@
                                             <CompositeTransform Rotation="-0.076"/>
                                         </FontIcon.RenderTransform>
                                     </FontIcon>
-                                    <TextBlock Text="Albums" FontSize="14" Width="90" HorizontalAlignment="Center" VerticalAlignment="Center" Height="52" RenderTransformOrigin="0.507,0.144" Margin="0,0,0,0" />
+                                    <TextBlock Text="Albums" FontSize="14" Width="90" HorizontalAlignment="Center" VerticalAlignment="Center" Height="52" RenderTransformOrigin="0.507,0.144" Margin="0,0,0,0" />                                                                 
                                 </StackPanel>
                             </Button>
                         </StackPanel>
                         <ListView x:Name ="AlbumNames" Visibility ="Visible"  ItemsSource ="{x:Bind pi.Albums}" Height="300" ScrollViewer.VerticalScrollMode="Enabled" ScrollViewer.VerticalScrollBarVisibility ="Auto" >
                             <ListView.ItemTemplate>
-                                <DataTemplate x:DataType="local:Images">
+                                <DataTemplate x:DataType="local:Images">                                    
                                     <Button  FontSize="14" FontWeight="Bold" Width="110" Height="34" Name="albumname" Click="Albumname_Click"  Content="{x:Bind AlbumName}" />
                                 </DataTemplate>
                             </ListView.ItemTemplate>
@@ -80,7 +80,7 @@
                             </DataTemplate>
                         </GridView.ItemTemplate>
                     </GridView>
-                    <TextBlock Text="Albums "/>
+                    <TextBlock Text="Albums "/>                
                     <GridView  x:Name="AlGridView"  ItemsSource="{x:Bind Path=pi.AlbumImageList}" >
                         <GridView.ItemTemplate >
                             <DataTemplate x:DataType="local:Images">
@@ -102,7 +102,7 @@
                                 </StackPanel>
                             </DataTemplate>
                         </GridView.ItemTemplate>
-                    </GridView>
+                    </GridView>              
                 </StackPanel>
             </SplitView>
         </ScrollViewer>

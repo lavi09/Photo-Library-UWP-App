@@ -15,11 +15,11 @@ namespace PhotoLib
 {
     class Images
     {
-        public int ID { get; set; }
+        public int ID { get; set; }    
         public string Name { get; set; }
         public BitmapImage Collection { get; set; }
         public StorageFile SourceImageFile { get; internal set; }
-        private static int lastImageID = 0;
+        private static int lastImageID = 0;        
         private static string FILE_NAME = "ImageStorage.txt";
         public string imageFileName;
         public StorageFile Temp = null;
@@ -27,7 +27,7 @@ namespace PhotoLib
         public ObservableCollection<Images> ImageList { get; private set; }
         public ObservableCollection<Images> VideoImageList { get; private set; }
         public string AlbumName { get; set; }
-        public BitmapImage AlbumCollection { get; set; }
+        public BitmapImage AlbumCollection { get;  set; }
         public ObservableCollection<Images> Albums { get; private set; }
         public ObservableCollection<Images> AlbumImageList { get; private set; }
         public StorageFile Temp1 { get; internal set; }
@@ -55,7 +55,7 @@ namespace PhotoLib
                 {
                     await imageFile.CopyAsync(localFolder);
                 }
-
+ 
                 image.Name = imageFile.Name;
                 image.ID = ++lastImageID;
                 FileHelper.WriteImagesToFileAsync(image, FILE_NAME);
@@ -93,13 +93,13 @@ namespace PhotoLib
                     ImageList.Add(p);
                 }
                 if (file.FileType.Equals(".mp4"))
-                {
+                {                    
                     VideoProperties videoProperties = await file.Properties.GetVideoPropertiesAsync();
                     StorageItemThumbnail storageItemThumbnail = await file.GetThumbnailAsync(ThumbnailMode.VideosView, 200, ThumbnailOptions.UseCurrentScale);
                     var video = new BitmapImage();
                     video.SetSource(storageItemThumbnail);
                     Images v = new Images
-                    {
+                    {                      
                         Name = file.Name,
                         videoFileName = file.Name,
                         Collection = video
@@ -118,8 +118,8 @@ namespace PhotoLib
                          where s.Name.ToLower().Contains(str)
                          select s);
             var query1 = (from Images s in VideoImageList
-                          where s.Name.ToLower().Contains(str)
-                          select s);
+                         where s.Name.ToLower().Contains(str)
+                         select s);
             ImageList = new ObservableCollection<Images>(query);
             VideoImageList = new ObservableCollection<Images>(query1);
         }

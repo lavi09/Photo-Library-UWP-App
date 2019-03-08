@@ -23,11 +23,11 @@ namespace PhotoLib
 {
     public sealed partial class FullsizeImage : Page
     {
-        ObservableCollection<BitmapImage> FullImg = new ObservableCollection<BitmapImage>();
+        ObservableCollection<BitmapImage> FullImg = new ObservableCollection<BitmapImage>();     
 
         public FullsizeImage()
         {
-            this.InitializeComponent();
+            this.InitializeComponent();            
         }
 
         private void Back_Click(object sender, RoutedEventArgs e)
@@ -64,6 +64,6 @@ namespace PhotoLib
                     }
                 }
             }
-        }
+        }      
     }
 }

@@ -180,33 +180,29 @@ namespace PhotoLib.PhotoLib_XamlTypeInfo
 
         private void InitTypeTables()
         {
-            _typeNameTable = new string[12];
+            _typeNameTable = new string[10];
             _typeNameTable[0] = "PhotoLib.Album";
             _typeNameTable[1] = "Windows.UI.Xaml.Controls.Page";
             _typeNameTable[2] = "Windows.UI.Xaml.Controls.UserControl";
-            _typeNameTable[3] = "Windows.Storage.StorageFile";
-            _typeNameTable[4] = "Object";
-            _typeNameTable[5] = "PhotoLib.BrowsePics";
-            _typeNameTable[6] = "Windows.UI.Xaml.Controls.ContentDialog";
-            _typeNameTable[7] = "Windows.UI.Xaml.Controls.ContentControl";
-            _typeNameTable[8] = "PhotoLib.Camera";
-            _typeNameTable[9] = "PhotoLib.CreateAlbum";
-            _typeNameTable[10] = "PhotoLib.FullsizeImage";
-            _typeNameTable[11] = "PhotoLib.MainPage";
+            _typeNameTable[3] = "PhotoLib.BrowsePics";
+            _typeNameTable[4] = "Windows.UI.Xaml.Controls.ContentDialog";
+            _typeNameTable[5] = "Windows.UI.Xaml.Controls.ContentControl";
+            _typeNameTable[6] = "PhotoLib.Camera";
+            _typeNameTable[7] = "PhotoLib.CreateAlbum";
+            _typeNameTable[8] = "PhotoLib.FullsizeImage";
+            _typeNameTable[9] = "PhotoLib.MainPage";
 
-            _typeTable = new global::System.Type[12];
+            _typeTable = new global::System.Type[10];
             _typeTable[0] = typeof(global::PhotoLib.Album);
             _typeTable[1] = typeof(global::Windows.UI.Xaml.Controls.Page);
             _typeTable[2] = typeof(global::Windows.UI.Xaml.Controls.UserControl);
-            _typeTable[3] = typeof(global::Windows.Storage.StorageFile);
-            _typeTable[4] = typeof(global::System.Object);
-            _typeTable[5] = typeof(global::PhotoLib.BrowsePics);
-            _typeTable[6] = typeof(global::Windows.UI.Xaml.Controls.ContentDialog);
-            _typeTable[7] = typeof(global::Windows.UI.Xaml.Controls.ContentControl);
-            _typeTable[8] = typeof(global::PhotoLib.Camera);
-            _typeTable[9] = typeof(global::PhotoLib.CreateAlbum);
-            _typeTable[10] = typeof(global::PhotoLib.FullsizeImage);
-            _typeTable[11] = typeof(global::PhotoLib.MainPage);
+            _typeTable[3] = typeof(global::PhotoLib.BrowsePics);
+            _typeTable[4] = typeof(global::Windows.UI.Xaml.Controls.ContentDialog);
+            _typeTable[5] = typeof(global::Windows.UI.Xaml.Controls.ContentControl);
+            _typeTable[6] = typeof(global::PhotoLib.Camera);
+            _typeTable[7] = typeof(global::PhotoLib.CreateAlbum);
+            _typeTable[8] = typeof(global::PhotoLib.FullsizeImage);
+            _typeTable[9] = typeof(global::PhotoLib.MainPage);
         }
 
         private int LookupTypeIndexByName(string typeName)
@@ -242,11 +238,11 @@ namespace PhotoLib.PhotoLib_XamlTypeInfo
         }
 
         private object Activate_0_Album() { return new global::PhotoLib.Album(); }
-        private object Activate_5_BrowsePics() { return new global::PhotoLib.BrowsePics(); }
-        private object Activate_8_Camera() { return new global::PhotoLib.Camera(); }
-        private object Activate_9_CreateAlbum() { return new global::PhotoLib.CreateAlbum(); }
-        private object Activate_10_FullsizeImage() { return new global::PhotoLib.FullsizeImage(); }
-        private object Activate_11_MainPage() { return new global::PhotoLib.MainPage(); }
+        private object Activate_3_BrowsePics() { return new global::PhotoLib.BrowsePics(); }
+        private object Activate_6_Camera() { return new global::PhotoLib.Camera(); }
+        private object Activate_7_CreateAlbum() { return new global::PhotoLib.CreateAlbum(); }
+        private object Activate_8_FullsizeImage() { return new global::PhotoLib.FullsizeImage(); }
+        private object Activate_9_MainPage() { return new global::PhotoLib.MainPage(); }
 
         private global::Windows.UI.Xaml.Markup.IXamlType CreateXamlType(int typeIndex)
         {
@@ -261,7 +257,6 @@ namespace PhotoLib.PhotoLib_XamlTypeInfo
             case 0:   //  PhotoLib.Album
                 userType = new global::PhotoLib.PhotoLib_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
                 userType.Activator = Activate_0_Album;
-                userType.AddMemberName("SourceFile");
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
@@ -274,55 +269,45 @@ namespace PhotoLib.PhotoLib_XamlTypeInfo
                 xamlType = new global::PhotoLib.PhotoLib_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 3:   //  Windows.Storage.StorageFile
-                userType = new global::PhotoLib.PhotoLib_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
-                userType.SetIsReturnTypeStub();
-                xamlType = userType;
-                break;
-
-            case 4:   //  Object
-                xamlType = new global::PhotoLib.PhotoLib_XamlTypeInfo.XamlSystemBaseType(typeName, type);
-                break;
-
-            case 5:   //  PhotoLib.BrowsePics
+            case 3:   //  PhotoLib.BrowsePics
                 userType = new global::PhotoLib.PhotoLib_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.ContentDialog"));
-                userType.Activator = Activate_5_BrowsePics;
+                userType.Activator = Activate_3_BrowsePics;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 6:   //  Windows.UI.Xaml.Controls.ContentDialog
+            case 4:   //  Windows.UI.Xaml.Controls.ContentDialog
                 xamlType = new global::PhotoLib.PhotoLib_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 7:   //  Windows.UI.Xaml.Controls.ContentControl
+            case 5:   //  Windows.UI.Xaml.Controls.ContentControl
                 xamlType = new global::PhotoLib.PhotoLib_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 8:   //  PhotoLib.Camera
+            case 6:   //  PhotoLib.Camera
                 userType = new global::PhotoLib.PhotoLib_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_8_Camera;
+                userType.Activator = Activate_6_Camera;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 9:   //  PhotoLib.CreateAlbum
+            case 7:   //  PhotoLib.CreateAlbum
                 userType = new global::PhotoLib.PhotoLib_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.ContentDialog"));
-                userType.Activator = Activate_9_CreateAlbum;
+                userType.Activator = Activate_7_CreateAlbum;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 10:   //  PhotoLib.FullsizeImage
+            case 8:   //  PhotoLib.FullsizeImage
                 userType = new global::PhotoLib.PhotoLib_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_10_FullsizeImage;
+                userType.Activator = Activate_8_FullsizeImage;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 11:   //  PhotoLib.MainPage
+            case 9:   //  PhotoLib.MainPage
                 userType = new global::PhotoLib.PhotoLib_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_11_MainPage;
+                userType.Activator = Activate_9_MainPage;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
@@ -331,26 +316,11 @@ namespace PhotoLib.PhotoLib_XamlTypeInfo
         }
 
 
-        private object get_0_Album_SourceFile(object instance)
-        {
-            var that = (global::PhotoLib.Album)instance;
-            return that.SourceFile;
-        }
 
         private global::Windows.UI.Xaml.Markup.IXamlMember CreateXamlMember(string longMemberName)
         {
             global::PhotoLib.PhotoLib_XamlTypeInfo.XamlMember xamlMember = null;
-            global::PhotoLib.PhotoLib_XamlTypeInfo.XamlUserType userType;
-
-            switch (longMemberName)
-            {
-            case "PhotoLib.Album.SourceFile":
-                userType = (global::PhotoLib.PhotoLib_XamlTypeInfo.XamlUserType)GetXamlTypeByName("PhotoLib.Album");
-                xamlMember = new global::PhotoLib.PhotoLib_XamlTypeInfo.XamlMember(this, "SourceFile", "Windows.Storage.StorageFile");
-                xamlMember.Getter = get_0_Album_SourceFile;
-                xamlMember.SetIsReadOnly();
-                break;
-            }
+            // No Local Properties
             return xamlMember;
         }
     }

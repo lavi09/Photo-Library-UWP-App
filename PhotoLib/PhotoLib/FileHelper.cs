@@ -10,7 +10,7 @@ namespace PhotoLib
 {
     static class FileHelper
     {
-        public static string FILE_NAME1 = "AlbumNames.txt";
+        public static string FILE_NAME1 = "AlbumNames.txt";       
 
         public static async void WriteImagesToFileAsync(Images image, String FILE_NAME)
         {
@@ -59,7 +59,7 @@ namespace PhotoLib
         }
 
         public static async void WriteAlbumToFileAsync(Images album)
-        {
+        {            
             StorageFolder allPLfolder = ApplicationData.Current.LocalFolder;
             StorageFile allPLFile = await allPLfolder.CreateFileAsync(FILE_NAME1, CreationCollisionOption.OpenIfExists);
             var allplines = await FileIO.ReadLinesAsync(allPLFile);
@@ -74,14 +74,14 @@ namespace PhotoLib
                         exist = true;
                     }
                 }
-            }
+            }           
             if (exist == false)
-            {
+            {           
                 var albumfilename = album.AlbumName + Environment.NewLine;
                 await FileIO.AppendTextAsync(allPLFile, albumfilename);
             }
-        }
-
+        }  
+               
         public static async Task<ICollection<Images>> GetAllAlbumsAsync()
         {
             List<Images> albums = new List<Images>();
@@ -93,9 +93,9 @@ namespace PhotoLib
             foreach (var pline in allplines)
             {
                 if (pline != "")
-                {
+                {                   
                     var album = new Images();
-                    album.AlbumName = pline;
+                    album.AlbumName = pline;                   
                     albums.Add(album);
                 }
             }
@@ -108,7 +108,7 @@ namespace PhotoLib
             bool rewrite = false;
             StorageFolder allPLfolder = ApplicationData.Current.LocalFolder;
             StorageFile allPLFile = await allPLfolder.CreateFileAsync(FILE_NAME1, CreationCollisionOption.OpenIfExists);
-            var allplines = await FileIO.ReadLinesAsync(allPLFile);
+            var allplines = await FileIO.ReadLinesAsync(allPLFile);           
             bool exist = false;
             foreach (var pline in allplines)
             {
@@ -119,7 +119,7 @@ namespace PhotoLib
                         exist = true;
                     }
                 }
-            }
+            }            
             if (exist == true)
             {
                 if (rewrite == false)

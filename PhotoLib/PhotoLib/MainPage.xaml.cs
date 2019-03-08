@@ -32,7 +32,7 @@ namespace PhotoLib
     {
         private Images pi;
         ObservableCollection<BitmapImage> ImgList = new ObservableCollection<BitmapImage>();
-
+      
         public MainPage()
         {
             this.InitializeComponent();
@@ -105,7 +105,7 @@ namespace PhotoLib
             pi.DisplayAllAlbums();
             this.DataContext = pi;
             this.AlbumNames.ItemsSource = pi.Albums;
-            MySplitView.IsPaneOpen = true;
+            MySplitView.IsPaneOpen = true;          
             if (pi.Albums.Count > 0)
             {
                 AlbumNames.Visibility = Visibility.Visible;
@@ -136,9 +136,9 @@ namespace PhotoLib
                 {
                     AlbumName = plname.ToString(),
 
-                });
+                });         
             }
-            else if (result == ContentDialogResult.Secondary)
+            else if (result == ContentDialogResult.Secondary) 
             {
                 dialog1.Hide();
             }
@@ -150,7 +150,7 @@ namespace PhotoLib
         }
 
         private async void VideoImageGridView_ItemClick(object sender, ItemClickEventArgs e)
-        {
+        {          
             MyMediaElement.Visibility = Visibility.Visible;
             Images videoInContext = (Images)e.ClickedItem;
             StorageFolder localFolder = ApplicationData.Current.LocalFolder;
@@ -178,7 +178,7 @@ namespace PhotoLib
                     IRandomAccessStream fileStream = await file.OpenAsync(FileAccessMode.Read);
                     MyMediaElement.SetSource(fileStream, file.ContentType);
                 }
-                MyMediaElement.AutoPlay = true;
+                 MyMediaElement.AutoPlay = true;
             }
         }
 
@@ -190,18 +190,18 @@ namespace PhotoLib
             {
                 StorageItemThumbnail storageItemThumbnail = await f.GetThumbnailAsync(ThumbnailMode.PicturesView, 200, ThumbnailOptions.UseCurrentScale);
                 var Picture = new BitmapImage();
-                Picture.SetSource(storageItemThumbnail);
+                Picture.SetSource(storageItemThumbnail);               
                 Images a = new Images
                 {
                     AlbumCollection = Picture,
-
+                    
                 };
 
                 pi.AlbumImageList.Add(a);
             }
         }
 
-
+        
     }
 
 }

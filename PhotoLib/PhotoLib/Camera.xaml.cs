@@ -46,7 +46,7 @@ namespace PhotoLib
             StorageFile photo = await captureUI.CaptureFileAsync(CameraCaptureUIMode.Photo);
             StorageFile fileCopy = await photo.CopyAsync(Windows.Storage.ApplicationData.Current.LocalFolder);
             if (photo == null)
-            {
+            {                
                 return;
             }
             if (TemporaryFile != null)
@@ -60,7 +60,7 @@ namespace PhotoLib
             };
             var camImageFile = camImage.Temp;
             camImage.Name = camImageFile.Name;
-            camImage.ID = ++camlastImageID;
+            camImage.ID = ++camlastImageID;             
             BitmapImage bitmapImage = new BitmapImage();
             FileRandomAccessStream stream = (FileRandomAccessStream)await TemporaryFile.OpenAsync(FileAccessMode.Read);
             bitmapImage.SetSource(stream);
