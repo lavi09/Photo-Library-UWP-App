@@ -92,7 +92,7 @@
                         </GridView.ItemTemplate>
                     </GridView>
                     <TextBlock x:ConnectionId='13' x:Name="VideosText" Text="Videos "/>
-                    <MediaElement x:ConnectionId='14'  x:Name="MyMediaElement" Visibility="collapsed" AutoPlay="True"  AreTransportControlsEnabled="True" Height="96" HorizontalAlignment="Center" VerticalAlignment="Center" Width="584" />
+                    <MediaElement x:ConnectionId='14'  x:Name="MyMediaElement" Visibility="collapsed" AutoPlay="True"  AreTransportControlsEnabled="True" Height="96" HorizontalAlignment="Center" VerticalAlignment="Center" Width="584"                                        />
                     <GridView x:ConnectionId='15'  x:Name="VideoImageGridView"                                                IsItemClickEnabled="True"                                                                                                >
                         <GridView.ItemTemplate >
                             <DataTemplate                          >

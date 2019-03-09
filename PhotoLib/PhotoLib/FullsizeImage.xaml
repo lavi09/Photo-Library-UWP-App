@@ -9,20 +9,21 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
     RequestedTheme="Dark">
 
-    <Grid>
-        <Button Name="Back" Click="Back_Click" HorizontalAlignment="Left" Height="48" Margin="804,10,0,0" VerticalAlignment="Top" RenderTransformOrigin="2.734,-1.125" Width="63" Background="Black" AllowFocusOnInteraction="False" >
-            <FontIcon FontFamily="Segoe MDL2 Assets"  VerticalAlignment="Center" HorizontalAlignment="Center" Glyph="&#xE711;" Height="48" Width="90" RenderTransformOrigin="2.367,0.55" />
-        </Button>
-        <FlipView x:Name="flipView1" ItemsSource="{x:Bind FullImg}" Background="Black"
-           Margin="205,0,203,0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+    <Page.BottomAppBar>
+        <CommandBar>
+            <AppBarButton Icon="Back" Label="Back" Click="Back_Click" />
+            <AppBarSeparator/>
+        </CommandBar>
+    </Page.BottomAppBar>
+    <Canvas>
+        <FlipView x:Name="flipView1" ItemsSource="{x:Bind FullImg}" >
             <FlipView.ItemTemplate>
                 <DataTemplate x:DataType="BitmapImage">
-                    <Image Width="600"
-                       Height="1000"
+                    <Image 
                        Source="{x:Bind}"
-                       Stretch="UniformToFill" />
+                       Stretch="Uniform" />
                 </DataTemplate>
             </FlipView.ItemTemplate>
         </FlipView>
-    </Grid>
+    </Canvas>
 </Page>
