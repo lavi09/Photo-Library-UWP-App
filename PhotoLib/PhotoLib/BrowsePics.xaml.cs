@@ -31,14 +31,10 @@ namespace PhotoLib
         {
             foreach (StorageFile imageFile in pickedFileList)
             {
-
                 var image = new Images
                 {
-
                     SourceImageFile = imageFile,
-
                 };
-
                 Images.AddImageAsync(image);
             }
         }
@@ -61,7 +57,6 @@ namespace PhotoLib
             picker.FileTypeFilter.Add(".jpeg");
             picker.FileTypeFilter.Add(".mp4");
             pickedFileList = await picker.PickMultipleFilesAsync();
-
             if (pickedFileList != null && pickedFileList.Count > 0)
             {
                 foreach (StorageFile file in pickedFileList)
@@ -69,7 +64,6 @@ namespace PhotoLib
                 Image.TextWrapping = TextWrapping.Wrap;
 
                 IsPrimaryButtonEnabled = true;
-
             }
         }
     }
