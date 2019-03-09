@@ -30,8 +30,6 @@ namespace PhotoLib
         private void ContentDialog_AddClick(ContentDialog sender, ContentDialogButtonClickEventArgs args)
         {
             Content = this.AlbumName.Text;
-
-
         }
 
         private void ContentDialog_CancelClick(ContentDialog sender, ContentDialogButtonClickEventArgs args)
