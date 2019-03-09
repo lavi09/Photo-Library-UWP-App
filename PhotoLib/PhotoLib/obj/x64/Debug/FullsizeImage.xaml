@@ -9,21 +9,22 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
     RequestedTheme="Dark">
 
-    <Grid>
-        <Button x:ConnectionId='2' Name="Back"                    HorizontalAlignment="Left" Height="48" Margin="804,10,0,0" VerticalAlignment="Top" RenderTransformOrigin="2.734,-1.125" Width="63" Background="Black" AllowFocusOnInteraction="False" >
-            <FontIcon FontFamily="Segoe MDL2 Assets"  VerticalAlignment="Center" HorizontalAlignment="Center" Glyph="&#xE711;" Height="48" Width="90" RenderTransformOrigin="2.367,0.55" />
-        </Button>
-        <FlipView x:ConnectionId='3' x:Name="flipView1"                                Background="Black"
-           Margin="205,0,203,0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+    <Page.BottomAppBar>
+        <CommandBar>
+            <AppBarButton x:ConnectionId='2' Icon="Back" Label="Back"                    />
+            <AppBarSeparator/>
+        </CommandBar>
+    </Page.BottomAppBar>
+    <Canvas>
+        <FlipView x:ConnectionId='3' x:Name="flipView1"                                >
             <FlipView.ItemTemplate>
                 <DataTemplate                         >
-                    <Image x:ConnectionId='4' Width="600"
-                       Height="1000"
+                    <Image x:ConnectionId='4' 
                                         
-                       Stretch="UniformToFill" />
+                       Stretch="Uniform" />
                 </DataTemplate>
             </FlipView.ItemTemplate>
         </FlipView>
-    </Grid>
+    </Canvas>
 </Page>
 

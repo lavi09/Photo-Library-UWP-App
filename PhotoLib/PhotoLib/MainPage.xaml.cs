@@ -185,6 +185,7 @@ namespace PhotoLib
                 }
                 MyMediaElement.AutoPlay = true;
             }
+            
         }
 
         protected async override void OnNavigatedTo(NavigationEventArgs e)
@@ -203,6 +204,14 @@ namespace PhotoLib
                 };
 
                 pi.AlbumImageList.Add(a);
+            }
+        }
+
+        private void MyMediaElement_MediaEnded(object sender, RoutedEventArgs e)
+        {
+            {
+                MyMediaElement.Source = null;
+                MyMediaElement.Visibility = Visibility.Collapsed;
             }
         }
     }
